@@ -1,5 +1,5 @@
 $(document).ready(function () {
-<<<<<<< HEAD
+//HEAD
   console.log("ready!");
   var map;
   function initMap() {
@@ -8,7 +8,37 @@ $(document).ready(function () {
         zoom: 8
     });
 }
-});
+
+console.log('ready2');
+
+function queryDive() {
+  var queryURL = "http://api.divesites.com/?mode=detail&siteid=17559"
+
+  $.ajax({
+    url: queryURL,
+    method: "GET"
+  })
+  .done(function(response) {
+    console.log(queryURL);
+    console.log(result);
+    console.log(response.sites.name);
+   
+      }); //End .done function
+
+  queryDive();
+
+  }; //End queryDive
+
+  queryDive();
+
+}); //End Document.ready
+
+
+
+
+
+
+
 /*    $.ajaxSetup({
 //      async: false
     })
@@ -44,9 +74,10 @@ $(document).ready(function () {
 
     console.log("Because our AJAX requests are asynchronous, this line of code will most likely log first");
 })*/
-=======
+/*=======
 
     console.log("ready!");
 
 
 >>>>>>> d351b4f38907841195dd568a2a0230b9115dc098
+*/
