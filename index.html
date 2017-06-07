@@ -19,12 +19,7 @@
             height: 50%;
             width: 50%;
         }
-        /* Optional: Makes the sample page fill the window. */
-        html, body {
-            height: 100%;
-            margin: 0;
-            padding: 0;
-        }
+
     </style>
 </head>
 <body>
@@ -60,17 +55,17 @@
     var infowindow;
 
     function initMap() {
-        var pyrmont = {lat: -33.867, lng: 151.195};
+        var florida = {lat: 28.538336, lng: -81.379234};
 
         map = new google.maps.Map(document.getElementById('map'), {
-            center: pyrmont,
-            zoom: 15
+            center: florida,
+            zoom: 8,
         });
 
         infowindow = new google.maps.InfoWindow();
         var service = new google.maps.places.PlacesService(map);
         service.nearbySearch({
-            location: pyrmont,
+            location: florida,
             radius: 500,
             type: ['store']
         }, callback);
