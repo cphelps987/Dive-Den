@@ -1,18 +1,9 @@
 $(document).ready(function () {
-//HEAD
-  console.log("ready!");
-  var map;
-  function initMap() {
-    map = new google.maps.Map(document.getElementById('map'), {
-        center: {lat: -34.397, lng: 150.644},
-        zoom: 8
-    });
-}
 
 console.log('ready2');
 
 function queryDive() {
-  var queryURL = "http://api.divesites.com/?mode=detail&siteid=17559"
+  var queryURL = "https://api.divesites.com/?mode=detail&siteid=17559"
 
   $.ajax({
     url: queryURL,
