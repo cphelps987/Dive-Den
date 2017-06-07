@@ -1,26 +1,24 @@
 $(document).ready(function () {
 
-console.log('ready2');
+console.log('ready1!');
 
 function queryDive() {
-  var queryURL = "https://api.divesites.com/?mode=detail&siteid=17559"
+  //var queryURL = "https://api.divesites.com/?mode=detail&siteid=17559"
+  var queryURL = "https://api.divesites.com/?mode=sites&lat=28.5383&lng=81.3792=25";
+  // 28.5383° N, 81.3792° W
+  // http://api.divesites.com/?mode=sites&lat=47.6031537682643&lng=-122.336164712906&dist=25
 
   $.ajax({
     url: queryURL,
     method: "GET"
   })
   .done(function(response) {
-    console.log(queryURL);
-    console.log(result);
-    console.log(response.sites.name);
+    console.log(response.request.loc.area_code);
+    console.log('ready2!)');
    
       }); //End .done function
 
-  queryDive();
-
-  }; //End queryDive
-
-  queryDive();
+}; //End function queryDive
 
 }); //End Document.ready
 
