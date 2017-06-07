@@ -1,4 +1,5 @@
 $(document).ready(function () {
+<<<<<<< HEAD
   console.log("ready!");
   var map;
   function initMap() {
@@ -43,3 +44,9 @@ $(document).ready(function () {
 
     console.log("Because our AJAX requests are asynchronous, this line of code will most likely log first");
 })*/
+=======
+
+    console.log("ready!");
+
+
+>>>>>>> d351b4f38907841195dd568a2a0230b9115dc098
