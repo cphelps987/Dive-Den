@@ -1,20 +1,69 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <!-- This stylesheet contains specific styles for displaying the map
-         on this page. Replace it with your own styles as described in the
-         documentation:
-         https://developers.google.com/maps/documentation/javascript/tutorial
-        <link rel="stylesheet" href="/maps/documentation/javascript/demos/demos.css">-->
+    <title>Simple Map</title>
+    <meta name="viewport" content="initial-scale=1.0">
+    <meta charset="utf-8">
     <script src="https://code.jquery.com/jquery.js"></script>
-    <script type="text/javascript" src="assets/javascript/app.js"></script>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
+
+<!-- Header -->
+<header id="header" class="">
+  <nav>
+    <div class="nav-wrapper">
+      <a href="#!" class="brand-logo center">The Dive Den</a>
+      <ul class="left hide-on-med-and-down">
+        <li class="active"><a href="collapsible.html">Home</a></li>
+      </ul>
+    </div>
+  </nav>
+</header>
+
+<!-- Divs -->
+<div id="top-locs"></div>
+
 <div id="map"></div>
+
+<div id="profile"></div>
+
+<div id="merchandise"></div>
+
+<!-- Google Maps -->
 <script>
-
-
+    function initMap() {
+        map = new google.maps.Map(document.getElementById('map'), {
+            center: {lat: -34.397, lng: 150.644},
+            zoom: 8
+        });
+    }
 </script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyClbAC2i9F_DocCTnfZokjM12bMdsT7bSs&callback=initMap"
+        async defer></script>
+
+<!--sticky footer not sticking -->        
+<footer class="page-footer">
+          <div class="container">
+            <div class="row">
+              <div class="col l6 s12">
+                <h5 class="white-text">The Dive Den</h5>
+              </div>
+              <div class="col l4 offset-l2 s12">
+                <h5 class="white-text">Links</h5>
+                <ul>
+                  <li><a class="grey-text text-lighten-3" href="index.html">Home</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="footer-copyright">
+            <div class="container">
+            © 2017 Copyright The Dive Den
+            </div>
+          </div>
+        </footer>
 </body>
 </html>

@@ -1,27 +1,45 @@
 $(document).ready(function () {
-
-    console.log("ready!");
-
-    var authKey = "AIzaSyClbAC2i9F_DocCTnfZokjM12bMdsT7bSs";
-    var queryURL = "https://maps.googleapis.com/maps/api/js?key=" + authKey + "&callback=initMap";
-
-    $.ajax({
-        url: queryURL,
-        method: "GET"
-    }).done(function () {
-
-        function initMap() {
-            var uluru = {lat: -25.363, lng: 131.044};
-            var map = new google.maps.Map(document.getElementById('map'), {
-                zoom: 4,
-                center: uluru
-            });
-            var marker = new google.maps.Marker({
-                position: uluru,
-                map: map
-            });
-        }
+  console.log("ready!");
+  var map;
+  function initMap() {
+    map = new google.maps.Map(document.getElementById('map'), {
+        center: {lat: -34.397, lng: 150.644},
+        zoom: 8
     });
+}
 });
+/*    $.ajaxSetup({
+//      async: false
+    })
+    //Google
+    $.ajax({
+      url: "https:maps.googleapis.com/maps/api/js?key=&callback=initMap",
+      method: "GET"
+    }).done(function(response) {
+      console.log(response);
+    });
+    //Amazon
+    $.ajax({
+      url: "",
+      method: "GET"
+    }).done(function(response) {
+      console.log(response);
+    });
+    //Fish 
+    $.ajax({
+      url: "",
+      method: "GET"
+    }).done(function(response) {
+      console.log(response);
+    });
+    //NP and Active Campsite
+    $.ajax({
+      url: "",
+      method: "GET"
+    }).done(function(response) {
+      console.log(response);
+    });
+// ---------------------------------------------------------
 
-
+    console.log("Because our AJAX requests are asynchronous, this line of code will most likely log first");
+})*/

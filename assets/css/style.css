@@ -1,0 +1,21 @@
+#map {
+      height: 100%;
+        }
+        /* Optional: Makes the sample page fill the window. */
+html {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+        }
+body {
+	height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+  }
+
+main {
+    flex: 1 0 auto;
+  }
