@@ -14,8 +14,8 @@
     <!--Import materialize.css-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css">
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/skeleton.css">
     <script type="text/javascript" src="assets/javascript/app.js"></script>
-
 </head>
 <body>
 
@@ -23,10 +23,7 @@
 <header id="header" class="">
   <nav>
     <div class="nav-wrapper">
-      <a href="#!" class="brand-logo center">The Dive Den</a>
-      <ul class="left hide-on-med-and-down">
-        <li class="active"><a href="collapsible.html">Home</a></li>
-      </ul>
+      <a href="#!" class="brand-logo">The Dive Den</a>
       <ul class="right hide-on-med-and-down">
       <form>
         <div class="input-field">
@@ -41,17 +38,28 @@
 </header>
 
 <!-- Divs -->
-<div id="top-locs">
-  <h4>Top Locations for Scuba Diving</h3>
-</div>
+<div class="container" style="height: 100%;width: 100%;">
+  
+</style>
+  <h4>Top Locations for Scuba Diving</h4>
+  <div class="row">
+<!-- need to figure out why the map disappears in a container -->
+    <div class="seven columns">
+      <div id="top-locs"></div>
+      <blockquote>Click on the map for diving areas near you:</blockquote>
+      <div id="map" style="clear:both; height: 500px;width: 500px;"></div>
+    </div>
 
-<blockquote>Click on the map for diving areas near you:</blockquote>
-<div id="map"></div>
+    <div class="five columns">  
+      <div id="profile">
+        <blockquote>Profile Placeholder:</blockquote>
+      </div>
+      <div id="merchandise">
+        <blockquote>Click on links below for scuba store:</blockquote>
+      </div>
+    </div> 
 
-<div id="profile"></div>
-<!-- Need to move to the right -->
-<div id="merchandise" class="">
-  <blockquote>Click on links below for scuba store:</blockquote>
+  </div>
 </div>
 
 <!-- Google Maps -->
@@ -114,9 +122,9 @@
                 <h5 class="white-text">The Dive Den</h5>
               </div>
               <div class="col l4 offset-l2 s12">
-                <h5 class="white-text">Links</h5>
+                <h5 class="white-text">Other Links to Scuba Diving</h5>
                 <ul>
-                  <li><a class="grey-text text-lighten-3" href="index.html">Home</a></li>
+                  <li><a class="grey-text text-lighten-3" href="index.html">Other Links</a></li>
                 </ul>
               </div>
             </div>
