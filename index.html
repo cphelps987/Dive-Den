@@ -68,14 +68,14 @@
 
         map = new google.maps.Map(document.getElementById('map'), {
             center: florida,
-            zoom: 8,
+            zoom: 8
         });
 
         infowindow = new google.maps.InfoWindow();
         var service = new google.maps.places.PlacesService(map);
         service.nearbySearch({
             location: florida,
-            radius: 500,
+            radius: 1000,
             keyword: 'scuba diving'
         }, callback);
     }
