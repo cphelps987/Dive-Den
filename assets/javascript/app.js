@@ -2,23 +2,21 @@ $(document).ready(function () {
 
 console.log('ready1!');
 
-function queryDive() {
   //var queryURL = "https://api.divesites.com/?mode=detail&siteid=17559"
-  var queryURL = "https://api.divesites.com/?mode=sites&lat=28.5383&lng=81.3792=25";
+  //var wikipedia = "&titles=vortex_spring"
+  var queryURL = "https://en.wikipedia.org/w/api.php?action=query&titles=vortex_spring&prop=revisions&rvprop=content&format=json&origin=*&gsrsearch=q";
   // 28.5383° N, 81.3792° W
-  // http://api.divesites.com/?mode=sites&lat=47.6031537682643&lng=-122.336164712906&dist=25
+  // http://api.divesites.com/?mode=sites&lat=47.6031537682643&lng=-122.336164712906&dist=25https://en.wikipedia.org/w/api.php?action=query&titles=blue+whale&prop=revisions&rvprop=content&format=json&origin=*&gsrsearch=q
 
   $.ajax({
     url: queryURL,
     method: "GET"
   })
   .done(function(response) {
-    console.log(response.request.loc.area_code);
-    console.log('ready2!)');
+    console.log('response', response);
+    console.log('ready2!');
    
       }); //End .done function
-
-}; //End function queryDive
 
 }); //End Document.ready
 
