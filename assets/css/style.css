@@ -1,9 +1,15 @@
 #map {
- /*  height: 75%;
- width: 50%;
+/*  does not affect map
+height: 75%;
+width: 50%;
+clear: both; */
  background-color: black;
- clear: both; */
 }  
+
+#container {
+  height: 100%;
+  width: 100%;
+}
 /* Optional: Makes the sample page fill the window. */
 html {
   height: 100%;
