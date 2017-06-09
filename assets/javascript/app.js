@@ -38,7 +38,6 @@
  */
 
 
-$(document).ready(function ($) {
 
 
 //-----------------------------------------DIVE SITES---------------------------------------------------------
@@ -56,28 +55,32 @@ $(document).ready(function ($) {
     $.ajax({
         url: diveURL,
         method: "GET"
-    })
-        .done(function (diveresponse) {
+    }).done(function (response) {
 
-            var diveResults = diveresponse.data;
+            console.log(response)
+
+            for (var i = 0; i < 250; i++) {
+
+                console.log(response.sites[i]);
+
+                var lat = parseInt(response.sites[i].lat);
+                var lng = parseInt(response.sites[i].lng);
+                var site = response.sites[i].name;
+
+                createMarker(lat, lng, site)
+            }
 
 
-            /*for (var i = 0; i < results.length; i++) {
 
-             if (diveresponse.sites[i]) {
 
-             var lat = diveresponse.sites[i].lat
+            // console.log('results', response.sites[1].lat);
+            // console.log(typeof(response.sites[1].lat) )
+            // console.log(typeof(parseInt(response.sites[1].lat)))
 
-             var lng = diveresponse.sites[i].lng
-
-             }*/
-            console.log(diveresponse);
-            console.log(diveresponse.sites[1].name);
 
         }); //End .done function
 
-
-//-----------------------------------------GOOGLE MAPS---------------------------------------------------------
+    //-----------------------------------------GOOGLE MAPS---------------------------------------------------------
 
 
     var map;
@@ -93,28 +96,28 @@ $(document).ready(function ($) {
         var service = new google.maps.places.PlacesService(map);
         service.nearbySearch({
             location: florida,
-            radius: 1000,
+            radius: 1000
         }, callback);
     }
 
-    function callback(results, status) {
-        if (status === google.maps.places.PlacesServiceStatus.OK) {
-            for (var i = 0; i < results.length; i++) {
-                createMarker(results[i]);
-            }
-        }
-    }
+    // function callback(results, status) {
+    //     if (status === google.maps.places.PlacesServiceStatus.OK) {
+    //         for (var i = 0; i < results.length; i++) {
+    //             createMarker(results[i]);
+    //         }
+    //     }
+    // }
 
-    function createMarker(place) {
-        var placeLoc = require('./array.js');
-        diveresponse.sites[0];
+    function createMarker(lat, lng, site) {
+        var placeLoc;
         //trying to figure out why it wont call the
         var marker = new google.maps.Marker({
             map: map,
-            position: placeLoc
+            position: {lat: lat, lng: lng},
+            title: site,
         });
         google.maps.event.addListener(marker, 'click', function () {
-            infowindow.setContent(place.name);
+            infowindow.setContent(name.name);
             infowindow.open(map, this);
         });
     }
@@ -320,4 +323,3 @@ $(document).ready(function ($) {
     });
 
 
-}); // end document.ready

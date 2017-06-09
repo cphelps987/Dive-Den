@@ -93,7 +93,7 @@ url += urlfilter;
 
 
 // Submit the request
-s=document.createElement('script'); // create script element
+s=document.createElement('#ebayResults'); // create script element
 s.src= url;
 document.body.appendChild(s);
 
