@@ -36,7 +36,7 @@ var params = {
             
       var hey = response.query.pages[c].extract;
             
-      $("#wikipediaImages").html(hey);
+      $("#wikip").html(hey);
      
     }); //End .each
   

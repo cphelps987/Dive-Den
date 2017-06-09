@@ -163,16 +163,13 @@
             infowindow.setContent(site);
             infowindow.open(map, this);
         });
-    }
+    };
 
 
 
 
 //-----------------------------------------WIKIPEDIA---------------------------------------------------------
 
-
-
-function wikidump(event) {
 
     console.log('ready1!', site);
 
@@ -215,10 +212,8 @@ function wikidump(event) {
             }); //End .each
 
         }); //End .done
-};
 
 //-----------------------------------------FLICKR---------------------------------------------------------
-
 
     console.log("flickr ready!")
 
