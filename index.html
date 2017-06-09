@@ -24,9 +24,9 @@
 
 <!-- Header -->
 <!-- Fix Search -->
-<header id="header" class="">
+<header>
   <nav>
-    <div class="nav-wrapper">
+    <div class="nav-wrapper teal-lighten-1">
       <a href="#!" class="brand-logo">The Dive Den</a>
       <ul class="right hide-on-med-and-down">
       <form>
@@ -40,12 +40,13 @@
     </div>
   </nav>
 </header>
-
 <!-- Divs -->
 <div class="container">
 
   <h4>Top Locations for Scuba Diving</h4>
         <div class="row">
+          <!-- <div class="weather"></div> -->
+
             <!-- map fixed -->
             <div class="seven columns">
                  <div id="top-locs"></div>
@@ -55,6 +56,13 @@
 
             <div class="five columns">
               <div id="profile">
+                <div id="wrap">
+                  <span id="intro">
+                    Currently in Orlando, FL: 
+                  </span>
+                  <span id="icon2"></span>
+                  <span id="temp"></span>
+            </div>
                 <!-- start of card -->
                 <div class="row">
                   <div class="col s12 m12">
@@ -69,15 +77,15 @@
                       </div>
                       <div class="card-action">
                         <a href="#">This is a link</a>
+                <div id="merchandise">
+                  <blockquote>Click on links below for scuba store:</blockquote>
+                  <p><div id="ebayResults"></div></p>
+                </div>
                       </div>
                     </div>
                   </div>
                 </div> <!-- end of card -->
               </div><!--end of profile-->
-                <div id="merchandise">
-                  <blockquote>Click on links below for scuba store:</blockquote>
-                        <p><div id="ebayResults"></div></p>
-                    </div>
                 </div><!--end of merch-->
             </div><!--end of col 5-->
 
@@ -90,7 +98,7 @@
 
 <!--sticky footer fixed --> 
 <!-- add merch to footer -->         
-<footer class="page-footer">
+<footer class="page-footer teal lighten-2">
           <div class="container">
             <div class="row">
               <div class="col l6 s12">
@@ -99,7 +107,7 @@
               <div class="col l4 offset-l2 s12">
                 <h5 class="white-text">Other Links to Scuba Diving</h5>
                 <ul>
-                  <li><a class="grey-text text-lighten-3" href="index.html">Other Links</a></li>
+                  <li><a class="grey-text teal-lighten-1" href="index.html">Other Links</a></li>
                 </ul>
               </div>
             </div>
