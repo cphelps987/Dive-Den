@@ -44,58 +44,47 @@
 <div class="container">
 
   <h4>Top Locations for Scuba Diving</h4>
-        <div class="row">
-          <!-- <div class="weather"></div> -->
 
-            <!-- map fixed -->
-            <div class="seven columns">
-                 <div id="top-locs"></div>
-                    <blockquote>Click on the map for diving areas near you:</blockquote>
-                        <div id="map" style="clear:both; height: 500px;width: 500px;"></div>
-            </div><!--end of col 7-->
+    <div class="row">
+      <!-- map fixed -->
+      <div class="seven columns">
+        <div id="top-locs"></div>
+          <blockquote>Click on the map for diving areas near you:</blockquote>
+            <div id="map" style="clear:both; height: 500px;width: 500px;"></div>
+      </div><!--end of col 7-->
 
-            <div class="five columns">
-              <div id="profile">
-                <div id="wrap">
-                  <span id="intro">
-                    Currently in Orlando, FL: 
-                  </span>
-                  <span id="icon2"></span>
-                  <span id="temp"></span>
-
+      <div class="five columns">
+        <div id="profile">
+          <div id="wrap">
+            <span id="intro">
+              Currently in Orlando, FL: 
+            </span>
+            <span id="icon2"></span>
+            <span id="temp"></span>
+          </div> <!-- end of wrap -->
+          <br>
+          <br>
+      </div> <!-- end of row -->
+          <!-- start of card -->
+          <div class="row">
+            <div class="col s12 m12">
+              <div class="card medium">
+                <div class="card-image">
+                  <!--<img src="images/sample-1.jpg">-->
+                    <div class="flickrImages" id="flickrImg"> </div><!-- photos from flickr -->
+                  <span class="card-title">Scuba Location</span>
                 </div>
-                <br>
-                <br>
-
+                <div class="card-content">
+                  <p><div id="wikip"></div></p>
+                </div>
+                <div class="card-action">
+                  <a href="#">This is a link</a>
+                </div> 
+              </div> 
             </div>
-
-                <!-- start of card -->
-                <div class="row">
-                  <div class="col s12 m12">
-                    <div class="card medium">
-                      <div class="card-image">
-                        <!--<img src="images/sample-1.jpg">-->
-                          <div class="flickrImages" id="flickrImg"> </div><!-- photos from flickr -->
-                        <span class="card-title">Scuba Location</span>
-                      </div>
-                      <div class="card-content">
-                            <p><div id="wikip"></div></p>
-                      </div>
-                      <div class="card-action">
-                        <a href="#">This is a link</a>
-                          <div id="merchandise"></div>
-                      </div>
-                    </div>
-                  </div>
-                </div> <!-- end of card -->
-              </div><!--end of profile-->
-
-                <div id="merchandise">
-                  <p><div id="ebayResults"></div></p>
-                </div>
-
-                </div><!--end of merch-->
-            </div><!--end of col 5-->
+          </div> <!-- end of card -->
+        </div><!--end of profile-->
+      </div><!--end of col 5-->
 
         </div><!--row-->
 </div><!--end of container-->

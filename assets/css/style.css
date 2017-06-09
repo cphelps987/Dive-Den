@@ -37,7 +37,7 @@ main {
 
 /*weather css from yahoo jQuery*/
 #wrap {
-    width: 350px;
+    width: 385px;
     background: #EEE; /* Old browsers */
     background: -moz-linear-gradient(top, rgba(240,240,240,1) 0%, rgba(224,224,224,1) 100%); /* FF3.6+ */
     background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(240,240,240,1)), color-stop(100%,rgba(224,224,224,1))); /* Chrome,Safari4+ */
