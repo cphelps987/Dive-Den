@@ -5,6 +5,7 @@
     <meta name="viewport" content="initial-scale=1.0">
     <meta charset="utf-8">
     <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <link href="https://fonts.googleapis.com/css?family=Kaushan+Script" rel="stylesheet">
     <!--Import jQuery before materialize.js-->
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>    
     <!--Import Google Icon Font-->
@@ -24,7 +25,7 @@
 
 <!-- Header -->
 <!-- Fix Search -->
-<header id="header" class="">
+<header>
   <nav>
     <div class="nav-wrapper">
       <a href="#!" class="brand-logo">The Dive Den</a>
@@ -40,18 +41,11 @@
     </div>
   </nav>
 </header>
-
 <!-- Divs -->
 <div class="container">
 
   <h4>Top Locations for Scuba Diving</h4>
-        <div class="row">
-            <!-- map fixed -->
-            <div class="seven columns">
-                 <div id="top-locs"></div>
-                    <blockquote>Click on the map for diving areas near you:</blockquote>
-                        <div id="map" style="clear:both; height: 500px;width: 500px;"></div>
-            </div><!--end of col 7-->
+
 
             <div class="five columns">
               <div id="profile">
@@ -65,7 +59,7 @@
                         <span class="card-title">Scuba Location</span>
                       </div>
                       <div class="card-content">
-                            <p><div id="wikipediaImages"></div></p>
+                            <div id="wikipediaImages"></div>
                       </div>
                       <div class="card-action">
                         <a href="#">This is a link</a>
@@ -76,7 +70,7 @@
               </div><!--end of profile-->
                 <div id="merchandise">
                   <blockquote>Click on links below for scuba store:</blockquote>
-                        <p><div id="ebayResults"></div></p>
+                        <div id="ebayResults"></div>
 
                         <a class="btn-large" id="gogglesBtn" href="http://www.ebay.com/sch/i.html?_odkw=diving+gear&_osacat=0&_from=R40&_trksid=p2045573.m570.l1313.TR4.TRC1.A0.H0.Xdiving+goggles.TRS0&_nkw=diving+goggles&_sacat=0" target="_blank">Goggles</a>
                         <a class="waves-effect waves-light btn-large" id="wetsuitBtn" href="http://www.ebay.com/sch/i.html?_odkw=diving+goggles&_osacat=0&_from=R40&_trksid=p2045573.m570.l1313.TR12.TRC2.A0.H0.Xwetsuit.TRS0&_nkw=wetsuit&_sacat=0" target="_blank">Wetsuit</a>
@@ -87,7 +81,55 @@
                 </div><!--end of merch-->
             </div><!--end of col 5-->
 
-        </div><!--row-->
+    <div class="row">
+      <!-- map fixed -->
+      <div class="seven columns">
+        <div id="top-locs"></div>
+          <blockquote>Click on the map for diving areas near you:</blockquote>
+            <div id="map" style="clear:both; height: 500px;width: 500px;"></div>
+      </div><!--end of col 7-->
+
+      <div class="five columns">
+        <div id="profile">
+          <div id="wrap">
+            <span id="intro">
+              Currently in Orlando, FL: 
+            </span>
+            <span id="icon2"></span>
+            <span id="temp"></span>
+          </div> <!-- end of wrap -->
+          <br>
+          <br>
+      </div> <!-- end of row -->
+          <!-- start of card -->
+          <div class="row">
+            <div class="col s12 m12">
+              <div class="card medium">
+                <div class="card-image">
+                  <!--<img src="images/sample-1.jpg">-->
+                    <div class="flickrImages" id="flickrImg"> </div><!-- photos from flickr -->
+                  <span class="card-title">Scuba Location</span>
+                </div>
+                <div class="card-content">
+                  <div id="wikip"></div>
+                </div>
+                <div class="card-action">
+                  <a href="#">This is a link</a>
+                </div> 
+              </div> 
+            </div>
+          </div> <!-- end of card -->
+        </div><!--end of profile-->
+      </div><!--end of col 5-->
+          </div><!--row-->
+
+      <div class="row">
+      <!-- map fixed -->
+        <div class="tewlve columns">
+          <div id="rolodex">PLACE PHOTO SLIDESHOW HERE</div>
+        </div>  
+      </div>       
+
 </div><!--end of container-->
 
 
@@ -96,16 +138,16 @@
 
 <!--sticky footer fixed --> 
 <!-- add merch to footer -->         
-<footer class="page-footer">
+<footer class="page-footer teal lighten-2">
           <div class="container">
             <div class="row">
               <div class="col l6 s12">
                 <h5 class="white-text">The Dive Den</h5>
               </div>
               <div class="col l4 offset-l2 s12">
-                <h5 class="white-text">Other Links to Scuba Diving</h5>
+                <h5 class="white-text">Buy Scuba Gear Below</h5>
                 <ul>
-                  <li><a class="grey-text text-lighten-3" href="index.html">Other Links</a></li>
+                  <li><a class="grey-text teal-lighten-1" href="index.html">Other Links</a></li>
                 </ul>
               </div>
             </div>
