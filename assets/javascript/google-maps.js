@@ -12,7 +12,6 @@ function initMap() {
     service.nearbySearch({
         location: florida,
         radius: 1000,
-        keyword: 'scuba diving'
     }, callback);
 }
 
@@ -25,10 +24,11 @@ function callback(results, status) {
 }
 
 function createMarker(place) {
-    var placeLoc = place.geometry.location;
+    var placeLoc = require('./array.js');diveresponse.sites[0];
+    //trying to figure out why it wont call the
     var marker = new google.maps.Marker({
         map: map,
-        position: place.geometry.location
+        position: placeLoc
     });
     google.maps.event.addListener(marker, 'click', function () {
         infowindow.setContent(place.name);

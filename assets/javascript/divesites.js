@@ -14,9 +14,10 @@ $(document).ready(function () {
         method: "GET"
     })
         .done(function(diveresponse) {
-          console.log(diveresponse);
-          console.log(diveresponse.sites[0]);
+         console.log(diveresponse);
+         console.log(diveresponse.sites);
 
         }); //End .done function
 
 }); //End Document.ready
+
