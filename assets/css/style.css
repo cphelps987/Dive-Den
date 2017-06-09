@@ -35,6 +35,11 @@ main {
   background-color: #80cbc4 !important;
 }
 
+.brand-logo,
+h5 {
+  font-family: 'Kaushan Script', cursive;
+}
+
 /*weather css from yahoo jQuery*/
 #wrap {
     width: 385px;
