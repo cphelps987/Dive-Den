@@ -11,5 +11,15 @@ $.ajax({
     console.log(response);
 
     $(".city").html("<h1>" + response.name + " Weather Details</h1>");
+    $(".wind").html("Wind Speed: " + response.wind.speed);
+    $(".humidity").html("Humidity: " + response.main.humidity);
+    $(".mainTemp").html("Temperature (F) " + response.main.temp);
+    $(".minTemp").html("Min. Temperature: " + response.main.temp_min);
+    $(".maxTemp").html("Max Temperature: " + response.main.temp_max);
+
     console.log("Wind Speed: " + response.wind.speed);
+    console.log("Humidity: " + response.main.humidity);
+    console.log("Temperature (F) " + response.main.temp);
+    console.log("Min. Temperature: " + response.main.temp_min);
+    console.log("Max Temperature: " + response.main.temp_max);
 });
