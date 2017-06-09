@@ -70,6 +70,48 @@
                 createMarker(lat, lng, site)
             }
 
+            console.log('ready1!');
+
+    var wikiSearch = site;
+    var queryURL = "https://en.wikipedia.org/w/api.php";
+
+    var params = {
+        "action": "query",
+        "format": "json",
+        "prop": "links|images|extlinks|imageinfo|info|url|extracts",
+        "iiprop": "timestamp|user|url|comment",
+        "meta": "url",
+        "origin": "*",
+        "iwurl": 1,
+        "titles": wikiSearch,
+        "redirects": 1,
+        "inprop": "url"
+
+    };
+
+    queryURL += "?" + $.param(params);
+    $.ajax({
+        url: queryURL,
+        method: "GET"
+    })
+        .done(function (response) {
+            console.log('ready2!');
+            console.log('response', response);
+
+            var objResult = response
+
+            console.log(objResult);
+
+            $.each(response.query.pages, function (c) {
+
+                var hey = response.query.pages[c].extract;
+
+                $("#wikip").html(hey);
+
+            }); //End .each
+
+        }); //End .done
+
 
 
 
@@ -124,12 +166,17 @@
     }
 
 
+
+
 //-----------------------------------------WIKIPEDIA---------------------------------------------------------
 
 
-    console.log('ready1!');
 
-    var wikiSearch = "Blue Spring State Park";
+function wikidump(event) {
+
+    console.log('ready1!', site);
+
+    var wikiSearch = site;
     var queryURL = "https://en.wikipedia.org/w/api.php";
 
     var params = {
@@ -163,12 +210,12 @@
 
                 var hey = response.query.pages[c].extract;
 
-                $("#wikipediaImages").html(hey);
+                $("#wikip").html(hey);
 
             }); //End .each
 
         }); //End .done
-
+};
 
 //-----------------------------------------FLICKR---------------------------------------------------------
 
