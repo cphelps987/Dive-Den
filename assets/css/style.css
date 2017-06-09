@@ -78,6 +78,36 @@ h5 {
     margin: 1px 6px 0 8px;
     overflow: hidden;
 }
+
+
+#gogglesBtn{
+    background: url(assets/images/goggles.png) no-repeat;
+    cursor:pointer;
+    border: none;
+    height: 125px;
+    width: 125px;
+}
+#wetsuitBtn{
+    background: url(assets/images/wetsuit.png) no-repeat;
+    cursor:pointer;
+    border: none;
+    height: 125px;
+    width: 125px;
+}
+#finsBtn{
+    background: url(assets/images/diver.png) no-repeat;
+    cursor:pointer;
+    border: none;
+    height: 125px;
+    width: 125px;
+}
+#gearBtn{
+    background: url(assets/images/flashlight.png) no-repeat;
+    cursor:pointer;
+    border: none;
+    height: 125px;
+    width: 125px;
+
 #temp {
     display: inline-block;
     font: 20px/28px Arial,Verdana,sans-serif;
