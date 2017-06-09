@@ -14,8 +14,21 @@ $(document).ready(function () {
         method: "GET"
     })
         .done(function(diveresponse) {
+
+            var diveResults = diveresponse.data;
+
+
+            /*for (var i = 0; i < results.length; i++) {
+
+                if (diveresponse.sites[i]) {
+
+                var lat = diveresponse.sites[i].lat
+
+                var lng = diveresponse.sites[i].lng
+
+                }*/
          console.log(diveresponse);
-         console.log(diveresponse.sites);
+         console.log(diveresponse.sites[1].name);
 
         }); //End .done function
 
