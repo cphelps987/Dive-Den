@@ -31,6 +31,10 @@ main {
 
 }
 
+.nav-wrapper {
+  background-color: #80cbc4 !important;
+}
+
 /*weather css from yahoo jQuery*/
 #wrap {
     width: 350px;
