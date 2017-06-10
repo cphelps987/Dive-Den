@@ -39,7 +39,7 @@
             // console.log('results', response.sites[1].lat);
             // console.log(typeof(response.sites[1].lat) )
             // console.log(typeof(parseInt(response.sites[1].lat)))
-        console.log(typeof )
+        console.log(typeof(response.sites[i].name));
 
 
         }); //End .done function
