@@ -33,6 +33,48 @@
                 createMarker(lat, lng, site)
             }
 
+            console.log('ready1!');
+
+    var wikiSearch = site;
+    var queryURL = "https://en.wikipedia.org/w/api.php";
+
+    var params = {
+        "action": "query",
+        "format": "json",
+        "prop": "links|images|extlinks|imageinfo|info|url|extracts",
+        "iiprop": "timestamp|user|url|comment",
+        "meta": "url",
+        "origin": "*",
+        "iwurl": 1,
+        "titles": wikiSearch,
+        "redirects": 1,
+        "inprop": "url"
+
+    };
+
+    queryURL += "?" + $.param(params);
+    $.ajax({
+        url: queryURL,
+        method: "GET"
+    })
+        .done(function (response) {
+            console.log('ready2!');
+            console.log('response', response);
+
+            var objResult = response
+
+            console.log(objResult);
+
+            $.each(response.query.pages, function (c) {
+
+                var hey = response.query.pages[c].extract;
+
+                $("#wikip").html(hey);
+
+            }); //End .each
+
+        }); //End .done
+
 
 
 
@@ -72,15 +114,19 @@
             infowindow.setContent(site);
             infowindow.open(map, this);
         });
-    }
+    };
+
+
 
 
 //-----------------------------------------WIKIPEDIA---------------------------------------------------------
 
 
+
     console.log('wiki ready');
 
-    var wikiSearch = "Blue Spring State Park";
+
+    var wikiSearch = site;
     var queryURL = "https://en.wikipedia.org/w/api.php";
 
     var params = {
@@ -113,15 +159,13 @@
 
                 var hey = response.query.pages[c].extract;
 
-                $("#wikipediaImages").html(hey);
+                $("#wikip").html(hey);
 
             }); //End .each
 
         }); //End .done
 
-
 //-----------------------------------------FLICKR---------------------------------------------------------
-
 
     console.log("flickr ready!");
 
@@ -129,6 +173,7 @@
      var tag1 = "florida",
          tag2 = "scuba",
          tag3 = site;
+
 
 
     $.getJSON("https://cors-bcs.herokuapp.com/https://api.flickr.com/services/feeds/photos_public.gne?tags="+ tag1 + tag2 + tag3 +"&format=json&nojsoncallback=1", function (data) {
