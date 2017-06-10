@@ -97,14 +97,14 @@ h5 {
 }
 
 #gogglesBtn{
-    background: url(assets/Images/goggles.png) no-repeat;
+    background: url(../Images/goggles.png) no-repeat;
 }
 #wetsuitBtn{
-    background: url(assets/Images/wetsuit.png) no-repeat;
+    background: url(../Images/wetsuit.png) no-repeat;
 }
 #finsBtn{
-    background: url(assets/Images/diver.png) no-repeat;
+    background: url(../Images/diver.png) no-repeat;
 }
 #gearBtn{
-    background: url(assets/Images/flashlight.png) no-repeat;
+    background: url(../Images/flashlight.png) no-repeat;
 }
