@@ -64,6 +64,7 @@ function createMarker(lat, lng, site) {
         title: site
     });
 
+
     var markerIt = "";
 
     google.maps.event.addListener(marker, 'click', function () {
@@ -83,7 +84,6 @@ function createMarker(lat, lng, site) {
         });
 
     });
-
 }
 
 
