@@ -92,9 +92,77 @@
   </div><!--end of 1st row -->
 
   <div class="row">
-    <!-- map fixed -->
     <div class="tewlve columns">
-      <div id="rolodex">PLACE PHOTO SLIDESHOW HERE</div> <!-- end of rolodex -->
+      <div id="rolodex">
+        <div class="slideshow-container">
+
+          <div class="mySlides fade">
+            <div class="numbertext">1 / 9</div>
+            <img src="assets/Images/ss1.jpg" style="width:100%">
+            <div class="text">"From birth, man carries</div>
+          </div>
+
+          <div class="mySlides fade">
+            <div class="numbertext">2 / 9</div>
+            <img src="assets/Images/ss2.jpg" style="width:100%">
+            <div class="text">the weight of gravity</div>
+          </div>
+
+          <div class="mySlides fade">
+            <div class="numbertext">3 / 9</div>
+            <img src="assets/Images/ss3.jpg" style="width:100%">
+            <div class="text">on his shoulders.</div>
+          </div>
+
+          <div class="mySlides fade">
+            <div class="numbertext">4 / 9</div>
+            <img src="assets/Images/ss4.jpg" style="width:100%">
+            <div class="text">He is bolted</div>
+          </div>
+
+          <div class="mySlides fade">
+            <div class="numbertext">5 / 9</div>
+            <img src="assets/Images/ss5.jpg" style="width:100%">
+            <div class="text">to earth. But</div>
+          </div>
+
+          <div class="mySlides fade">
+            <div class="numbertext">6 / 9</div>
+            <img src="assets/Images/ss6.jpg" style="width:100%">
+            <div class="text">man has only</div>
+          </div>
+
+          <div class="mySlides fade">
+            <div class="numbertext">7 / 9</div>
+            <img src="assets/Images/ss7.jpg" style="width:100%">
+            <div class="text">to sink beneath</div>
+          </div>
+
+          <div class="mySlides fade">
+            <div class="numbertext">8 / 9</div>
+            <img src="assets/Images/ss8.jpg" style="width:100%">
+            <div class="text">the surface and</div>
+          </div>
+
+          <div class="mySlides fade">
+            <div class="numbertext">9 / 9</div>
+            <img src="assets/Images/ss9.jpg" style="width:100%">
+            <div class="text">he is free."</div>
+          </div>
+        </div>
+<br>
+        <div style="text-align:center">
+          <span class="dot"></span> 
+          <span class="dot"></span> 
+          <span class="dot"></span> 
+          <span class="dot"></span> 
+          <span class="dot"></span> 
+          <span class="dot"></span>
+          <span class="dot"></span> 
+          <span class="dot"></span> 
+          <span class="dot"></span>
+        </div>
+      </div> <!-- end of rolodex -->
     </div> <!--end of col 12-->
   </div>  <!-- end of 2nd row -->
 
@@ -156,5 +224,26 @@
 </footer>
 
 <!-- <script type="text/javascript" src="assets/javascript/app.js"></script> -->
+<script>
+var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    var dots = document.getElementsByClassName("dot");
+    for (i = 0; i < slides.length; i++) {
+       slides[i].style.display = "none";  
+    }
+    slideIndex++;
+    if (slideIndex> slides.length) {slideIndex = 1}    
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";  
+    dots[slideIndex-1].className += " active";
+    setTimeout(showSlides, 5000); // Change image every 5 seconds
+}
+</script>
 </body>
 </html>
