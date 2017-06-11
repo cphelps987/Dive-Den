@@ -73,16 +73,13 @@ function createMarker(lat, lng, site) {
         console.log(marker.title);
         //console.log(typeof (marker.title));
 
-        $.getJSON("https://cors-bcs.herokuapp.com/https://api.flickr.com/services/feeds/photos_public.gne?tags=florida,scuba,"+ marker.title + "&format=json&nojsoncallback=1", function (data) {
+        $.getJSON("https://cors-bcs.herokuapp.com/https://api.flickr.com/services/feeds/photos_public.gne?tags="+ marker.title + ", scuba&format=json&nojsoncallback=1", function (data) {
             console.log(data);
-            if (data.items.length !== 0) {
                 $.each(data.items, function (i, item) {
                     $("<img>").attr("src", item.media.m).appendTo("#flickrImg")
 
                 });
-            } else {
-                $("#flickrImg").prepend($("<img>" , {src: "../image/defaultScuba.jpg"}))
-            }
+
         });
 
     });
