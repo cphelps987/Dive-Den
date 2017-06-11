@@ -40,6 +40,8 @@ h5 {
   font-family: 'Kaushan Script', cursive;
 }
 
+
+
 /*weather css from yahoo jQuery*/
 #wrap {
     width: 385px;
@@ -111,7 +113,7 @@ body {
   display:none;
 }
 img {
-  height: 300px;
+  height: auto;
 }
 
 /* Slideshow container */

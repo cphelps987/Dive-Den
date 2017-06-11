@@ -74,14 +74,59 @@ function createMarker(lat, lng, site) {
         console.log(marker.title);
         //console.log(typeof (marker.title));
 
+        <!--wiki-->
+        var wikiSearch = marker.title;
+        var wikiURL = "https://en.wikipedia.org/w/api.php";
+
+
+        var params = {
+            "action": "query",
+            "format": "json",
+            "prop": "links|images|extlinks|imageinfo|info|url|extracts",
+            "iiprop": "timestamp|user|url|comment",
+            "meta": "url",
+            "origin": "*",
+            "iwurl": 1,
+            "titles": wikiSearch,
+            "redirects": 1,
+            "inprop": "url"
+
+        };
+
+        console.log("parm title " + params.titles);
+
+
+        wikiURL += "?" + $.param(params);
+        $.ajax({
+            url: wikiURL,
+            method: "GET"
+        })
+            .done(function (response) {
+              //  console.log('response', response);
+
+
+                var objResult = response;
+
+                // console.log(objResult);
+
+                $.each(response.query.pages, function (c) { //this is showing an error please beware and fix
+
+                    var wikiPages = response.query.pages[c].extract; //please change var name to be more specific
+
+                    $("#wikip").html(wikiPages);
+
+                }); //End .each
+
+            }); //End .done
+
+        <!--flickr-->
+
         $.getJSON("https://cors-bcs.herokuapp.com/https://api.flickr.com/services/feeds/photos_public.gne?tags="+ marker.title + ", scuba&format=json&nojsoncallback=1", function (data) {
             console.log(data);
 
             $.each(data.items, function (i, item) {
-                $("<img>").attr("src", item.media.m).prependTo("#flickrImg")
-
+                $("<img>").attr("src", item.media.m).prependTo("#flickrImg").fadeIn();
             });
-
 
         });
 
@@ -94,52 +139,11 @@ function createMarker(lat, lng, site) {
 //-----------------------------------------WIKIPEDIA---------------------------------------------------------
 
 
-/*
  console.log('wiki ready');
 
 
 
- var wikiSearch = site;
- var wikiURL = "https://en.wikipedia.org/w/api.php";
 
-
- var params = {
- "action": "query",
- "format": "json",
- "prop": "links|images|extlinks|imageinfo|info|url|extracts",
- "iiprop": "timestamp|user|url|comment",
- "meta": "url",
- "origin": "*",
- "iwurl": 1,
- "titles": wikiSearch,
- "redirects": 1,
- "inprop": "url"
-
- };
-
-
- wikiURL += "?" + $.param(params);
- $.ajax({
- url: wikiURL,
- method: "GET"
- })
- .done(function (response) {
- console.log('response', response);
-
-
- var objResult = response
-
- // console.log(objResult);
-
- /!*  $.each(response.query.pages, function (c) { //this is showing an error please beware and fix
-
- var hey = response.query.pages[c].extract; //please change var name to be more specific*!/
-
- $("#wikip").html(hey);
-
- }); //End .each
-
- }); //End .done*/
 
 //-----------------------------------------FLICKR---------------------------------------------------------
 
