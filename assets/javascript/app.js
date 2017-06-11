@@ -99,8 +99,10 @@ function createMarker(lat, lng, site) {
  console.log('wiki ready');
 
 
+
  var wikiSearch = site;
  var wikiURL = "https://en.wikipedia.org/w/api.php";
+
 
  var params = {
  "action": "query",
@@ -116,13 +118,15 @@ function createMarker(lat, lng, site) {
 
  };
 
- wikiURL += "?" + $.param(params);
- $.ajax({
- url: wikiURL,
- method: "GET"
- })
- .done(function (response) {
- // console.log('response', response); //please be more specific in the console.log
+
+    wikiURL += "?" + $.param(params);
+    $.ajax({
+        url: wikiURL,
+        method: "GET"
+    })
+        .done(function (response) {
+            console.log('response', response);
+
 
  var objResult = response
 
@@ -143,6 +147,9 @@ function createMarker(lat, lng, site) {
 console.log("flickr ready!");
 
 
+    //site = response.sites[i].name;
+
+
 
 /*$.getJSON("https://cors-bcs.herokuapp.com/https://api.flickr.com/services/feeds/photos_public.gne?tags=florida,scuba&format=json&nojsoncallback=1", function (data) {
  //  console.log(data)
@@ -150,9 +157,19 @@ console.log("flickr ready!");
  $("<img>").attr("src", item.media.m).appendTo("#flickrImg")
 
 
+    $.getJSON("https://cors-bcs.herokuapp.com/https://api.flickr.com/services/feeds/photos_public.gne?tags=florida,scuba&format=json&nojsoncallback=1", function (data) {
+        console.log(data)
+        $.each(data.items, function (i, item) {
+            $("<img>").attr("src", item.media.m).appendTo("#flickrImg")
+        });
+
+    });
+
+
  });
 
  });*/
+
 
 
 

@@ -1,23 +1,24 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Simple Map</title>
-    <meta name="viewport" content="initial-scale=1.0">
-    <meta charset="utf-8">
-    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
-    <link href="https://fonts.googleapis.com/css?family=Kaushan+Script" rel="stylesheet">
-    <!--Import jQuery before materialize.js-->
-    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>    
-    <!--Import Google Icon Font-->
-    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <!--Import jQuery before materialize.js-->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>
-    <!--Import materialize.css-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css">
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="assets/css/skeleton.css">
-    <!--<script type="text/javascript" src="assets/javascript/app.js"></script> -->
-    <script type="text/javascript" src="assets/javascript/app.js"></script>
+  <title>Simple Map</title>
+  <meta name="viewport" content="initial-scale=1.0">
+  <meta charset="utf-8">
+  <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+  <link href="https://fonts.googleapis.com/css?family=Kaushan+Script" rel="stylesheet">
+  <!--Import jQuery before materialize.js-->
+  <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <!--Import Google Icon Font-->
+  <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!--Import jQuery before materialize.js-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>
+  <!--Import materialize.css-->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/skeleton.css">
+  <!--<script type="text/javascript" src="assets/javascript/app.js"></script> -->
+  <script type="text/javascript" src="assets/javascript/app.js"></script>
 
 
 </head>
@@ -30,14 +31,14 @@
   <nav>
     <div class="nav-wrapper">
       <a href="#!" class="brand-logo">The Dive Den</a>
-      <ul class="right hide-on-med-and-down">
-      <form>
-        <div class="input-field">
-          <input id="search" type="search" required>
-          <label class="label-icon" for="search"><i class="material-icons">search</i></label>
-          <i class="material-icons">close</i>
-        </div>
-      </form>
+      <ul class="right hide-on-small">
+        <form>
+          <div class="input-field">
+            <input id="search" type="search" required>
+            <label class="label-icon" for="search"><i class="material-icons">search</i></label>
+            <i class="material-icons">close</i>
+          </div>
+        </form>
       </ul>
     </div>
   </nav>
@@ -47,100 +48,63 @@
 
   <h4>Top Locations for Scuba Diving</h4>
 
+  <div class="row">
+    <!-- map fixed -->
+    <div class="seven columns">
+      <div id="top-locs"></div> <!-- end of rop locs -->
+      <blockquote>Click on the map for diving areas near you:</blockquote>
+      <div id="map" style="clear:both; height: 500px;width: 500px;"></div> <!-- end of map -->
+    </div><!--end of col 7-->
 
-            <div class="five columns">
-              <div id="profile">
-                <!-- start of card -->
-                <div class="row">
-                  <div class="col s12 m12">
-                    <div class="card medium">
-                      <div class="card-image">
-                        <!--<img src="images/sample-1.jpg">-->
-                          <div class="flickrImages" id="flickrImg"> </div><!-- photos from flickr -->
-                        <span class="card-title">Scuba Location</span>
-                      </div>
-                      <div class="card-content">
-                            <div id="wikipediaImages"></div>
-                      </div>
-                      <div class="card-action">
-                        <a href="#">This is a link</a>
-                      </div>
-                    </div>
-                  </div>
-                </div> <!-- end of card -->
-              </div><!--end of profile-->
-
-                  <blockquote>Click on links below for scuba store:</blockquote>
-                        <div id="ebayResults"></div>
-
-                        <a class="btn-large" id="gogglesBtn" href="http://www.ebay.com/sch/i.html?_odkw=diving+gear&_osacat=0&_from=R40&_trksid=p2045573.m570.l1313.TR4.TRC1.A0.H0.Xdiving+goggles.TRS0&_nkw=diving+goggles&_sacat=0" target="_blank">Goggles</a>
-                        <a class="waves-effect waves-light btn-large" id="wetsuitBtn" href="http://www.ebay.com/sch/i.html?_odkw=diving+goggles&_osacat=0&_from=R40&_trksid=p2045573.m570.l1313.TR12.TRC2.A0.H0.Xwetsuit.TRS0&_nkw=wetsuit&_sacat=0" target="_blank">Wetsuit</a>
-                        <a class="waves-effect waves-light btn-large" id="finsBtn" href="http://www.ebay.com/sch/i.html?_from=R40&_trksid=p2374313.m570.l1313.TR12.TRC2.A0.H0.Xdiving+fins.TRS0&_nkw=diving+fins&_sacat=0" target="_blank">Fins</a>
-                        <a class="waves-effect waves-light btn-large" id="gearBtn" href="http://www.ebay.com/sch/i.html?_odkw=diving+fins&_osacat=0&_from=R40&_trksid=p2045573.m570.l1313.TR9.TRC1.A0.H0.Xdiving+gear.TRS0&_nkw=diving+gear&_sacat=0" target="_blank">Diving Gear</a>
-
-                    </div>
-                </div><!--end of merch-->
-            </div><!--end of col 5-->
-
-    <div class="row">
-      <!-- map fixed -->
-      <div class="seven columns">
-        <div id="top-locs"></div> <!-- end of rop locs -->
-          <blockquote>Click on the map for diving areas near you:</blockquote>
-            <div id="map" style="clear:both; height: 500px;width: 500px;"></div> <!-- end of map -->
-      </div><!--end of col 7-->
-
-      <div class="five columns">
-        <div id="profile">
-          <div id="wrap">
+    <div class="five columns">
+      <div id="profile">
+        <div id="wrap">
             <span id="intro">
-              Currently in Orlando, FL: 
+              Currently in Orlando, FL:
             </span>
-            <span id="icon2"></span>
-            <span id="temp"></span>
-          </div> <!-- end of wrap -->
+          <span id="icon2"></span>
+          <span id="temp"></span>
+        </div> <!-- end of wrap -->
 
-          <br>
-          <br>
-      
-          <!-- start of card -->
-          <div class="row">
-            <div class="col s12 m12">
-              <div class="card medium">
-                <div class="card-image">
-                  <!--<img src="images/sample-1.jpg">-->
-                    <div class="flickrImages" id="flickrImg"> </div><!-- photos from flickr --> <!-- end of flickr -->
-                  <span class="card-title">Scuba Location</span>
-                </div> <!-- end of card image -->
-                <div class="card-content">
+        <br>
+        <br>
 
-                  <div id="wikip"></div>
-                </div> <!-- end of card content -->
+        <!-- start of card -->
+        <div class="row">
+          <div class="col s12 m12">
+            <div class="card medium">
+              <div class="card-image">
+                <!--<img src="images/sample-1.jpg">-->
+                <div class="flickrImages" id="flickrImg"> </div><!-- photos from flickr --> <!-- end of flickr -->
+                <span class="card-title">Scuba Location</span>
+              </div> <!-- end of card image -->
+              <div class="card-content">
+                <p><div id="wikip"></div></p>
+              </div> <!-- end of card content -->
+              <div class="card-action">
+                <a href="#">This is a link</a>
+              </div> <!-- end of card action -->
+            </div> <!-- end of card medium -->
+          </div> <!-- end of m12 -->
+        </div> <!-- end of card row -->
+      </div><!--end of profile-->
+    </div><!--end of col 5-->
+  </div><!--end of 1st row -->
 
-                <div class="card-action">
-                  <a href="#">This is a link</a>
-                </div> <!-- end of card action -->
-              </div> <!-- end of card medium -->
-            </div> <!-- end of m12 -->
-          </div> <!-- end of card row -->
-        </div><!--end of profile-->
-      </div><!--end of col 5-->
-    </div><!--end of 1st row -->
-
-      <div class="row">
-      <!-- map fixed -->
-        <div class="tewlve columns">
-          <div id="rolodex">PLACE PHOTO SLIDESHOW HERE</div> <!-- end of rolodex -->
-        </div> <!--end of col 12-->
-      </div>  <!-- end of 2nd row -->     
+  <div class="row">
+    <!-- map fixed -->
+    <div class="tewlve columns">
+      <div id="rolodex">PLACE PHOTO SLIDESHOW HERE</div> <!-- end of rolodex -->
+    </div> <!--end of col 12-->
+  </div>  <!-- end of 2nd row -->
 
 </div><!--end of container-->
 
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyClbAC2i9F_DocCTnfZokjM12bMdsT7bSs&libraries=places&callback=initMap" async defer></script>
 
-<!--sticky footer fixed --> 
+<!--sticky footer fixed -->
 <!-- add merch to footer -->
-<!--all tags line up-->         
+<!--all tags line up-->
 <footer class="page-footer teal lighten-2">
   <div class="container">
     <div class="row">
@@ -149,15 +113,44 @@
       </div>
       <div class="col l4 offset-l2 s12">
         <h5 class="white-text">Buy Scuba Gear Below</h5>
-        <ul>
-          <li><a class="grey-text teal-lighten-1" href="index.html">Other Links</a></li>
-        </ul>
+        <div class="wrapper">
+          <div class="row">
+            <div class="col-md-3 col-md-offset-0">
+              <div class="thumbnail">
+                <a href="http://www.ebay.com/sch/i.html?_odkw=diving+gear&_osacat=0&_from=R40&_trksid=p2045573.m570.l1313.TR4.TRC1.A0.H0.Xdiving+goggles.TRS0&_nkw=diving+goggles&_sacat=0" target="_blank" id="gogglesBtn">
+                  <img src="assets/Images/goggles.png" alt="Googles" style="width:100%">
+                </a>
+              </div>
+            </div>
+            <div class="col-md-3 col-md-offset-0">
+              <div class="thumbnail">
+                <a href="http://www.ebay.com/sch/i.html?_odkw=diving+goggles&_osacat=0&_from=R40&_trksid=p2045573.m570.l1313.TR12.TRC2.A0.H0.Xwetsuit.TRS0&_nkw=wetsuit&_sacat=0" target="_blank" id="wetsuitBtn">
+                  <img src="assets/Images/wetsuit.png" alt="Wetsuits" style="width:100%">
+                </a>
+              </div>
+            </div>
+            <div class="col-md-3 col-md-offset-0">
+              <div class="thumbnail">
+                <a href="http://www.ebay.com/sch/i.html?_from=R40&_trksid=p2374313.m570.l1313.TR12.TRC2.A0.H0.Xdiving+fins.TRS0&_nkw=diving+fins&_sacat=0" target="_blank"  id="finsBtn">
+                  <img src="assets/Images/diver.png" alt="diver" style="width:100%">
+                </a>
+              </div>
+            </div>
+            <div class="col-md-3 col-md-offset-0">
+              <div class="thumbnail">
+                <a href="http://www.ebay.com/sch/i.html?_odkw=diving+fins&_osacat=0&_from=R40&_trksid=p2045573.m570.l1313.TR9.TRC1.A0.H0.Xdiving+gear.TRS0&_nkw=diving+gear&_sacat=0" target="_blank" id="gearBtn">
+                  <img src="assets/Images/flashlight.png" alt="lights" style="width:100%">
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
-  <div class="footer-copyright">
+  <div class="footer-copyright teal-lighten-1">
     <div class="container">
-    © 2017 Copyright The Dive Den
+      © 2017 Copyright The Dive Den
     </div>
   </div>
 </footer>
