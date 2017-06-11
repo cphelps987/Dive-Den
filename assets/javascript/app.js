@@ -76,10 +76,12 @@ function createMarker(lat, lng, site) {
 
         $.getJSON("https://cors-bcs.herokuapp.com/https://api.flickr.com/services/feeds/photos_public.gne?tags="+ marker.title + ", scuba&format=json&nojsoncallback=1", function (data) {
             console.log(data);
-                $.each(data.items, function (i, item) {
-                    $("<img>").attr("src", item.media.m).appendTo("#flickrImg")
 
-                });
+            $.each(data.items, function (i, item) {
+                $("<img>").attr("src", item.media.m).prependTo("#flickrImg")
+
+            });
+
 
         });
 
@@ -116,13 +118,13 @@ function createMarker(lat, lng, site) {
  };
 
 
-    wikiURL += "?" + $.param(params);
-    $.ajax({
-        url: wikiURL,
-        method: "GET"
-    })
-        .done(function (response) {
-            console.log('response', response);
+ wikiURL += "?" + $.param(params);
+ $.ajax({
+ url: wikiURL,
+ method: "GET"
+ })
+ .done(function (response) {
+ console.log('response', response);
 
 
  var objResult = response
@@ -144,7 +146,7 @@ function createMarker(lat, lng, site) {
 console.log("flickr ready!");
 
 
-    //site = response.sites[i].name;
+//site = response.sites[i].name;
 
 
 
@@ -154,13 +156,13 @@ console.log("flickr ready!");
  $("<img>").attr("src", item.media.m).appendTo("#flickrImg")
 
 
-    $.getJSON("https://cors-bcs.herokuapp.com/https://api.flickr.com/services/feeds/photos_public.gne?tags=florida,scuba&format=json&nojsoncallback=1", function (data) {
-        console.log(data)
-        $.each(data.items, function (i, item) {
-            $("<img>").attr("src", item.media.m).appendTo("#flickrImg")
-        });
+ $.getJSON("https://cors-bcs.herokuapp.com/https://api.flickr.com/services/feeds/photos_public.gne?tags=florida,scuba&format=json&nojsoncallback=1", function (data) {
+ console.log(data)
+ $.each(data.items, function (i, item) {
+ $("<img>").attr("src", item.media.m).appendTo("#flickrImg")
+ });
 
-    });
+ });
 
 
  });
