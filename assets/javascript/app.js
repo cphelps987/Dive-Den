@@ -127,7 +127,7 @@
 
 
     var wikiSearch = site;
-    var queryURL = "https://en.wikipedia.org/w/api.php";
+    var wikiURL = "https://en.wikipedia.org/w/api.php";
 
     var params = {
         "action": "query",
@@ -143,9 +143,9 @@
 
     };
 
-    queryURL += "?" + $.param(params);
+    wikiURL += "?" + $.param(params);
     $.ajax({
-        url: queryURL,
+        url: wikiURL,
         method: "GET"
     })
         .done(function (response) {
@@ -170,13 +170,10 @@
     console.log("flickr ready!");
 
     //site = response.sites[i].name;
-     var tag1 = "florida",
-         tag2 = "scuba",
-         tag3 = site;
 
 
 
-    $.getJSON("https://cors-bcs.herokuapp.com/https://api.flickr.com/services/feeds/photos_public.gne?tags="+ tag1 + tag2 + tag3 +"&format=json&nojsoncallback=1", function (data) {
+    $.getJSON("https://cors-bcs.herokuapp.com/https://api.flickr.com/services/feeds/photos_public.gne?tags=florida,scuba&format=json&nojsoncallback=1", function (data) {
         console.log(data)
         $.each(data.items, function (i, item) {
             $("<img>").attr("src", item.media.m).appendTo("#flickrImg")
@@ -192,16 +189,16 @@
 
     var APIKey = "166a433c57516f51dfab1f7edaed8413";
 
-    var queryURL = "http://api.openweathermap.org/data/2.5/weather?" +
+    var weatherURL = "http://api.openweathermap.org/data/2.5/weather?" +
         "q=Orlando,ORL&units=imperial&appid=" + APIKey;
 
     $.ajax({
-        url: queryURL,
+        url: weatherURL,
         method: "GET"
     }).done(function (response) {
-        console.log(queryURL);
+        /*console.log(weatherURL);
         console.log(response);
-
+*/
         $(".city").html("<h1>" + response.name + " Weather Details</h1>");
         $(".wind").html("Wind Speed: " + response.wind.speed);
         $(".humidity").html("Humidity: " + response.main.humidity);
@@ -209,11 +206,11 @@
         $(".minTemp").html("Min. Temperature: " + response.main.temp_min);
         $(".maxTemp").html("Max Temperature: " + response.main.temp_max);
 
-        console.log("Wind Speed: " + response.wind.speed);
+     /*   console.log("Wind Speed: " + response.wind.speed);
         console.log("Humidity: " + response.main.humidity);
         console.log("Temperature (F) " + response.main.temp);
         console.log("Min. Temperature: " + response.main.temp_min);
-        console.log("Max Temperature: " + response.main.temp_max);
+        console.log("Max Temperature: " + response.main.temp_max);*/
     });
 
 
