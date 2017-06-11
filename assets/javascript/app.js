@@ -76,10 +76,12 @@ function createMarker(lat, lng, site) {
 
         $.getJSON("https://cors-bcs.herokuapp.com/https://api.flickr.com/services/feeds/photos_public.gne?tags="+ marker.title + ", scuba&format=json&nojsoncallback=1", function (data) {
             console.log(data);
+
             $.each(data.items, function (i, item) {
                 $("<img>").attr("src", item.media.m).prependTo("#flickrImg")
 
             });
+
 
         });
 
