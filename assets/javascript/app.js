@@ -64,6 +64,7 @@ function createMarker(lat, lng, site) {
         title: site
     });
 
+
     var markerIt = "";
 
     google.maps.event.addListener(marker, 'click', function () {
@@ -73,20 +74,16 @@ function createMarker(lat, lng, site) {
         console.log(marker.title);
         //console.log(typeof (marker.title));
 
-        $.getJSON("https://cors-bcs.herokuapp.com/https://api.flickr.com/services/feeds/photos_public.gne?tags=florida,scuba,"+ marker.title + "&format=json&nojsoncallback=1", function (data) {
+        $.getJSON("https://cors-bcs.herokuapp.com/https://api.flickr.com/services/feeds/photos_public.gne?tags="+ marker.title + ", scuba&format=json&nojsoncallback=1", function (data) {
             console.log(data);
-            if (data.items.length !== 0) {
-                $.each(data.items, function (i, item) {
-                    $("<img>").attr("src", item.media.m).appendTo("#flickrImg")
+            $.each(data.items, function (i, item) {
+                $("<img>").attr("src", item.media.m).prependTo("#flickrImg")
 
-                });
-            } else {
-                $("#flickrImg").prepend($("<img>" , {src: "../image/defaultScuba.jpg"}))
-            }
+            });
+
         });
 
     });
-
 }
 
 
@@ -119,13 +116,13 @@ function createMarker(lat, lng, site) {
  };
 
 
-    wikiURL += "?" + $.param(params);
-    $.ajax({
-        url: wikiURL,
-        method: "GET"
-    })
-        .done(function (response) {
-            console.log('response', response);
+ wikiURL += "?" + $.param(params);
+ $.ajax({
+ url: wikiURL,
+ method: "GET"
+ })
+ .done(function (response) {
+ console.log('response', response);
 
 
  var objResult = response
@@ -147,7 +144,7 @@ function createMarker(lat, lng, site) {
 console.log("flickr ready!");
 
 
-    //site = response.sites[i].name;
+//site = response.sites[i].name;
 
 
 
@@ -157,13 +154,13 @@ console.log("flickr ready!");
  $("<img>").attr("src", item.media.m).appendTo("#flickrImg")
 
 
-    $.getJSON("https://cors-bcs.herokuapp.com/https://api.flickr.com/services/feeds/photos_public.gne?tags=florida,scuba&format=json&nojsoncallback=1", function (data) {
-        console.log(data)
-        $.each(data.items, function (i, item) {
-            $("<img>").attr("src", item.media.m).appendTo("#flickrImg")
-        });
+ $.getJSON("https://cors-bcs.herokuapp.com/https://api.flickr.com/services/feeds/photos_public.gne?tags=florida,scuba&format=json&nojsoncallback=1", function (data) {
+ console.log(data)
+ $.each(data.items, function (i, item) {
+ $("<img>").attr("src", item.media.m).appendTo("#flickrImg")
+ });
 
-    });
+ });
 
 
  });
