@@ -2,63 +2,61 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="39937ae2-a276-4c9e-95b8-e2e9ba39256d" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/images/defaultScuba.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/images/default_scuba_files/22587739@N00.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/images/default_scuba_files/33406936080_28ea0de969_n.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/images/default_scuba_files/33406936080_c09fe63e66_k.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/images/default_scuba_files/combo" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/images/default_scuba_files/combo(1)" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/images/default_scuba_files/combo(10)" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/images/default_scuba_files/combo(11)" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/images/default_scuba_files/combo(12)" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/images/default_scuba_files/combo(13)" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/images/default_scuba_files/combo(14)" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/images/default_scuba_files/combo(15)" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/images/default_scuba_files/combo(16)" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/images/default_scuba_files/combo(17)" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/images/default_scuba_files/combo(18)" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/images/default_scuba_files/combo(19)" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/images/default_scuba_files/combo(2)" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/images/default_scuba_files/combo(20)" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/images/default_scuba_files/combo(21)" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/images/default_scuba_files/combo(22)" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/images/default_scuba_files/combo(23)" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/images/default_scuba_files/combo(24)" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/images/default_scuba_files/combo(25)" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/images/default_scuba_files/combo(26)" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/images/default_scuba_files/combo(27)" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/images/default_scuba_files/combo(28)" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/images/default_scuba_files/combo(29)" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/images/default_scuba_files/combo(3)" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/images/default_scuba_files/combo(30)" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/images/default_scuba_files/combo(31)" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/images/default_scuba_files/combo(32)" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/images/default_scuba_files/combo(33)" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/images/default_scuba_files/combo(34)" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/images/default_scuba_files/combo(35)" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/images/default_scuba_files/combo(36)" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/images/default_scuba_files/combo(37)" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/images/default_scuba_files/combo(38)" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/images/default_scuba_files/combo(39)" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/images/default_scuba_files/combo(4)" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/images/default_scuba_files/combo(40)" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/images/default_scuba_files/combo(41)" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/images/default_scuba_files/combo(42)" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/images/default_scuba_files/combo(43)" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/images/default_scuba_files/combo(44)" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/images/default_scuba_files/combo(45)" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/images/default_scuba_files/combo(46)" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/images/default_scuba_files/combo(47)" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/images/default_scuba_files/combo(5)" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/images/default_scuba_files/combo(6)" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/images/default_scuba_files/combo(7)" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/images/default_scuba_files/combo(8)" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/images/default_scuba_files/combo(9)" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/images/default_scuba_files/flickr-js-sdk-e721f084.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/images/default_scuba_files/flickr-router-755c9e63.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/images/default_scuba_files/radar.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/images/default_scuba_files/rollup-01d8fa97.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/javascript/app.js" afterPath="$PROJECT_DIR$/assets/javascript/app.js" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/images/default_scuba_files/22587739@N00.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/images/default_scuba_files/33406936080_28ea0de969_n.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/images/default_scuba_files/33406936080_c09fe63e66_k.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/images/default_scuba_files/combo" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/images/default_scuba_files/combo(1)" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/images/default_scuba_files/combo(10)" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/images/default_scuba_files/combo(11)" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/images/default_scuba_files/combo(12)" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/images/default_scuba_files/combo(13)" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/images/default_scuba_files/combo(14)" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/images/default_scuba_files/combo(15)" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/images/default_scuba_files/combo(16)" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/images/default_scuba_files/combo(17)" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/images/default_scuba_files/combo(18)" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/images/default_scuba_files/combo(19)" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/images/default_scuba_files/combo(2)" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/images/default_scuba_files/combo(20)" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/images/default_scuba_files/combo(21)" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/images/default_scuba_files/combo(22)" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/images/default_scuba_files/combo(23)" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/images/default_scuba_files/combo(24)" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/images/default_scuba_files/combo(25)" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/images/default_scuba_files/combo(26)" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/images/default_scuba_files/combo(27)" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/images/default_scuba_files/combo(28)" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/images/default_scuba_files/combo(29)" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/images/default_scuba_files/combo(3)" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/images/default_scuba_files/combo(30)" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/images/default_scuba_files/combo(31)" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/images/default_scuba_files/combo(32)" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/images/default_scuba_files/combo(33)" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/images/default_scuba_files/combo(34)" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/images/default_scuba_files/combo(35)" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/images/default_scuba_files/combo(36)" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/images/default_scuba_files/combo(37)" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/images/default_scuba_files/combo(38)" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/images/default_scuba_files/combo(39)" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/images/default_scuba_files/combo(4)" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/images/default_scuba_files/combo(40)" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/images/default_scuba_files/combo(41)" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/images/default_scuba_files/combo(42)" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/images/default_scuba_files/combo(43)" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/images/default_scuba_files/combo(44)" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/images/default_scuba_files/combo(45)" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/images/default_scuba_files/combo(46)" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/images/default_scuba_files/combo(47)" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/images/default_scuba_files/combo(5)" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/images/default_scuba_files/combo(6)" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/images/default_scuba_files/combo(7)" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/images/default_scuba_files/combo(8)" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/images/default_scuba_files/combo(9)" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/images/default_scuba_files/flickr-js-sdk-e721f084.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/images/default_scuba_files/flickr-router-755c9e63.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/images/default_scuba_files/radar.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/images/default_scuba_files/rollup-01d8fa97.css" afterPath="" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -74,7 +72,7 @@
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="948">
-              <caret line="118" column="0" lean-forward="true" selection-start-line="118" selection-start-column="0" selection-end-line="118" selection-end-column="0" />
+              <caret line="118" column="0" lean-forward="false" selection-start-line="118" selection-start-column="0" selection-end-line="118" selection-end-column="0" />
               <folding>
                 <marker date="1497158636000" expanded="true" signature="6714:6757" ph="..." />
                 <marker date="1497158636000" expanded="true" signature="6714:6766" ph="..." />
@@ -88,8 +86,8 @@
       <file leaf-file-name="app.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/assets/javascript/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="884">
-              <caret line="191" column="0" lean-forward="true" selection-start-line="191" selection-start-column="0" selection-end-line="191" selection-end-column="0" />
+            <state relative-caret-position="493">
+              <caret line="70" column="35" lean-forward="true" selection-start-line="70" selection-start-column="35" selection-end-line="70" selection-end-column="35" />
               <folding />
             </state>
           </provider>
@@ -330,7 +328,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="35939000" />
+    <option name="totallyTimeSpent" value="36110000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1007" y="23" width="673" height="1011" extended-state="0" />
@@ -793,8 +791,8 @@
     <entry file="file://$PROJECT_DIR$/MapTest.html" />
     <entry file="file://$PROJECT_DIR$/assets/javascript/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="884">
-          <caret line="191" column="0" lean-forward="true" selection-start-line="191" selection-start-column="0" selection-end-line="191" selection-end-column="0" />
+        <state relative-caret-position="493">
+          <caret line="70" column="35" lean-forward="true" selection-start-line="70" selection-start-column="35" selection-end-line="70" selection-end-column="35" />
           <folding />
         </state>
       </provider>
@@ -802,7 +800,7 @@
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="948">
-          <caret line="118" column="0" lean-forward="true" selection-start-line="118" selection-start-column="0" selection-end-line="118" selection-end-column="0" />
+          <caret line="118" column="0" lean-forward="false" selection-start-line="118" selection-start-column="0" selection-end-line="118" selection-end-column="0" />
           <folding>
             <marker date="1497158636000" expanded="true" signature="6714:6757" ph="..." />
             <marker date="1497158636000" expanded="true" signature="6714:6766" ph="..." />
