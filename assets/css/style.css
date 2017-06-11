@@ -149,7 +149,7 @@ img {
   background-color: #bbb;
   border-radius: 50%;
   display: inline-block;
-  transition: background-color 6.6s ease;
+  transition: background-color 4.6s ease;
 }
 
 .active {
@@ -159,9 +159,9 @@ img {
 /* Fading animation */
 .fade {
   -webkit-animation-name: fade;
-  -webkit-animation-duration: 7.5s;
+  -webkit-animation-duration: 5.5s;
   animation-name: fade;
-  animation-duration: 7.5s;
+  animation-duration: 5.5s;
 }
 
 @-webkit-keyframes fade {
