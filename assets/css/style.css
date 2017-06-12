@@ -113,7 +113,7 @@ body {
   display:none;
 }
 img {
-  height: auto;
+  height: 25%;
 }
 
 /* Slideshow container */
@@ -187,4 +187,8 @@ img {
 
 #profile {
   padding-top: 25px; 
+}
+
+.input {
+
 }

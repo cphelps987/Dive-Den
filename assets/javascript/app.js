@@ -232,10 +232,10 @@ function showSlides() {
 //-----------------------------------------SEARCHBOX---------------------------------------------------------
 
 
-    var a = document.getElementById('searchbox');
+    var a = document.getElementById('newsearch');
     a.addEventListener('submit',function(e) {
         e.preventDefault();
-        var b = document.getElementById('search').value;
+        var b = document.getElementById('gttextinput').value;
         window.location.href = 'https://cphelps987.github.io/Project1/'+b;
 
     });
