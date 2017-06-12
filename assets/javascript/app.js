@@ -229,6 +229,16 @@ function showSlides() {
 */
 
 
+//-----------------------------------------SEARCHBOX---------------------------------------------------------
+
+
+    var a = document.getElementById('searchbox');
+    a.addEventListener('submit',function(e) {
+        e.preventDefault();
+        var b = document.getElementById('search').value;
+        window.location.href = 'https://cphelps987.github.io/Project1/'+b;
+
+    });
 
 
 //-----------------------------------------USER INPUT---------------------------------------------------------
@@ -241,14 +251,6 @@ function validateForm() {
         console.log("Not a valid e-mail address");
         return false;
     }
-}
-
-//-----------------------------------------SEARCHBOX---------------------------------------------------------
-
-
-document.getElementById('frmSearch').onsubmit = function() {
-    window.location = 'http://www.google.com/search?q=' + document.getElementById('txtSearch').value;
-    return false;
 }
 
 

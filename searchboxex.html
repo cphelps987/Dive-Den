@@ -1,30 +1,17 @@
-<header>
-<nav>
-  <div class="nav-wrapper">
-  <a href="#!" class="brand-logo">The Dive Den</a>
-  <div class="row">
-  <div class="col-md-3 col-md-offset-0">
-      <ul class="right hide-on-small">
-        <form>
-          <div class="input-field">
-            <input id="search" type="search" required>
-            <label class="label-icon" for="search"><i class="material-icons">search</i></label>
-            <i class="material-icons">close</i>
-          </div>
-        </form>
-      </ul>
-      </div>
-      <div class="col-md-3 col-md-offset-0">
-      <form>
-          <div class="input-field">
-            <input id="email" type="email" class="validate">
-            <label for="email" data-error="wrong" data-success="right">Email</label>
-            </div>
-        </div>
-      </form>
-    </div>
-  </div>
-  </div>
-  </div>
-</nav>
-</header>
+<div id="tfheader">
+    <form id="tfnewsearch" method="get" action="http://www.google.com/search?">
+        <input type="text" class="tftextinput" id="tftextinput" name="q" size="21" maxlength="120"><input type="submit" value="search" class="tfbutton">
+    </form>
+<div class="tfclear"></div>
+</div>
+
+<script>
+    var a = document.getElementById('searchbox');
+    a.addEventListener('submit',function(e) {
+        e.preventDefault();
+        var b = document.getElementById('search').value;
+        window.location.href = 'https://cphelps987.github.io/Project1/'+b;
+
+    });
+
+</script>
