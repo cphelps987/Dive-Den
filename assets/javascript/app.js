@@ -41,7 +41,6 @@ $.ajax({
 
 //-----------------------------------------GOOGLE MAPS---------------------------------------------------------
 
-
 var map;
 var infowindow;
 
@@ -54,7 +53,6 @@ function initMap() {
     infowindow = new google.maps.InfoWindow();
 
 }
-
 
 function createMarker(lat, lng, site) {
     // console.log('CreateMarker', lat, lng, site);
@@ -119,7 +117,7 @@ function createMarker(lat, lng, site) {
 
             }); //End .done
 
-        <!--flickr-->
+        //flickr
 
         $.getJSON("https://cors-bcs.herokuapp.com/https://api.flickr.com/services/feeds/photos_public.gne?tags="+ marker.title + ", scuba&format=json&nojsoncallback=1", function (data) {
             console.log(data);
@@ -134,13 +132,10 @@ function createMarker(lat, lng, site) {
 }
 
 
-
-
 //-----------------------------------------WIKIPEDIA---------------------------------------------------------
 
 
  console.log('wiki ready');
-
 
 
 
