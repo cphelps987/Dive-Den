@@ -250,7 +250,19 @@ function validateForm() {
     if (atpos<1 || dotpos<atpos+2 || dotpos+2>=x.length) {
         console.log("Not a valid e-mail address");
         return false;
-    }
+    } else {
+        window.localStorage.setItem('email', x);
+    };
+};
+
+
+//-----------------------------------------SEARCHBOX---------------------------------------------------------
+
+
+/*document.getElementById('frmSearch').onsubmit = function() {
+    window.location = 'http://www.google.com/search?q=' + document.getElementById('txtSearch').value;
+    return false;
 }
+*/
 
 
