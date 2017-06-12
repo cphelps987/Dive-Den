@@ -1,7 +1,4 @@
-
 //-----------------------------------------DIVE SITES---------------------------------------------------------
-
-
 console.log('Divesite page ready');
 
 var diveURL = "https://cors-bcs.herokuapp.com/http://api.divesites.com/?mode=sites&lat=28.538336&lng=-81.379234&dist=1000";
@@ -228,3 +225,12 @@ function showSlides() {
     setTimeout(showSlides, 5000); // Change image every 5 seconds
 }
 */
+
+//-----------------------------------------TOGGLE---------------------------------------------------------
+
+$(function(){
+    $("#show").hide();
+    $(".mapTog").on("click", function(){
+        $("#hide, #show").toggle();
+    });
+});

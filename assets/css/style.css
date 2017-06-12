@@ -181,6 +181,6 @@ img {
   .text {font-size: 11px}
 }
 
-#cardInfo {
+.cardInfo {
   opacity: 0;
 }
