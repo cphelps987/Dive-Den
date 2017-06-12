@@ -31,22 +31,20 @@
   <nav>
     <div class="nav-wrapper">
       <a href="#!" class="brand-logo">The Dive Den</a>
-      <ul class="right hide-on-small">
-        <form>
-          <div class="input-field">
-            <input id="search" type="search" required>
-            <label class="label-icon" for="search"><i class="material-icons">search</i></label>
-            <i class="material-icons">close</i>
-          </div>
-        </form>
-      </ul>
+        <div class="right hide-on-small">
+          <div id="header">
+            <form id="newsearch" method="get" action="http://www.google.com/search?">
+              <input type="text" class="textinput" id="gttextinput" name="q" size="30" maxlength="120">
+              <input type="submit" value="search" class="button hide">
+            </form>
+          <div class="clear"></div>
+        </div>
+      </div>
     </div>
   </nav>
 </header>
 <!-- Divs -->
 <div class="container">
-
-  <h4>Top Locations for Scuba Diving</h4>
 
   <div class="row">
     <!-- map fixed -->
@@ -61,20 +59,20 @@
 
     <div class="five columns">
       <div id="profile">
-        <div id="wrap">
-            <span id="intro">
-              Currently in Orlando, FL:
-            </span>
-          <span id="icon2"></span>
-          <span id="temp"></span>
-        </div> <!-- end of wrap -->
 
+<!--         where new widget should go
+<div id="wrap">
+    <span id="intro">
+      Currently in Orlando, FL:
+    </span>
+  <span id="icon2"></span>
+  <span id="temp"></span>
+</div> end of wrap
+ -->
         <br>
         <br>
 
         <!-- start of card -->
-      <div id="hide"></div>
-      <div id="show">
         <div class="row">
           <div class="col s12 m12">
             <div class="card medium infoCard">
@@ -94,16 +92,12 @@
                 This site will help you explore some of the most well known diving spots in florida and also give you access to locations that only the locals know.  Click on a location in the map that interests you to find your new dive site!
                 </div>
               </div> <!-- end of card content -->
-              <div class="card-action">
-                <a href="#">This is a link</a>
-              </div> <!-- end of card action -->
             </div> <!-- end of card medium -->
           </div> <!-- end of m12 -->
         </div> <!-- end of card row -->
       </div><!--end of profile-->
     </div><!--end of col 5-->
   </div><!--end of 1st row -->
-      </div>
 
   <div class="row">
     <div class="tewlve columns">
@@ -112,55 +106,55 @@
 
           <div class="mySlides fade">
             <div class="numbertext">1 / 9</div>
-            <img src="assets/Images/ss1.jpg" style="width:100%">
+            <img src="assets/Images/ss1.jpg" style="width:100%;height:25%">
             <div class="text">"From birth, man carries</div>
           </div>
 
           <div class="mySlides fade">
             <div class="numbertext">2 / 9</div>
-            <img src="assets/Images/ss2.jpg" style="width:100%">
+            <img src="assets/Images/ss2.jpg" style="width:100%;height:25%">
             <div class="text">the weight of gravity</div>
           </div>
 
           <div class="mySlides fade">
             <div class="numbertext">3 / 9</div>
-            <img src="assets/Images/ss3.jpg" style="width:100%">
+            <img src="assets/Images/ss3.jpg" style="width:100%;height:25%">
             <div class="text">on his shoulders.</div>
           </div>
 
           <div class="mySlides fade">
             <div class="numbertext">4 / 9</div>
-            <img src="assets/Images/ss4.jpg" style="width:100%">
+            <img src="assets/Images/ss4.jpg" style="width:100%;height:25%">
             <div class="text">He is bolted</div>
           </div>
 
           <div class="mySlides fade">
             <div class="numbertext">5 / 9</div>
-            <img src="assets/Images/ss5.jpg" style="width:100%">
+            <img src="assets/Images/ss5.jpg" style="width:100%;height:25%">
             <div class="text">to earth. But</div>
           </div>
 
           <div class="mySlides fade">
             <div class="numbertext">6 / 9</div>
-            <img src="assets/Images/ss6.jpg" style="width:100%">
+            <img src="assets/Images/ss6.jpg" style="width:100%;height:25%">
             <div class="text">man has only</div>
           </div>
 
           <div class="mySlides fade">
             <div class="numbertext">7 / 9</div>
-            <img src="assets/Images/ss7.jpg" style="width:100%">
+            <img src="assets/Images/ss7.jpg" style="width:100%;height:25%">
             <div class="text">to sink beneath</div>
           </div>
 
           <div class="mySlides fade">
             <div class="numbertext">8 / 9</div>
-            <img src="assets/Images/ss8.jpg" style="width:100%">
+            <img src="assets/Images/ss8.jpg" style="width:100%;height:25%">
             <div class="text">the surface and</div>
           </div>
 
           <div class="mySlides fade">
             <div class="numbertext">9 / 9</div>
-            <img src="assets/Images/ss9.jpg" style="width:100%">
+            <img src="assets/Images/ss9.jpg" style="width:100%;height:25%">
             <div class="text">he is free."</div>
           </div>
         </div>
@@ -194,7 +188,7 @@
         <h5 class="white-text">The Dive Den</h5>
         <form name="myForm" action="" onsubmit="return validateForm();" 
         method="post" class="white-text"> Sign Up Email for Newsletter: <input type="text" name="email">
-        <input type="submit" value="Submit">
+        <input type="submit" value="Submit" class="black-text">
         </form>
 
       </div>
