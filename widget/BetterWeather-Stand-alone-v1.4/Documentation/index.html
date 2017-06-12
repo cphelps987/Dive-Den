@@ -1,0 +1,1467 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="description" content="">
+		<meta name="author" content="BetterStudio">
+		<title>BetterWeather Standalone version Documentation</title>
+
+		<!-- Bootstrap core CSS -->
+		<link href="./bootstrap/css/bootstrap.min.css" rel="stylesheet">
+		<link href="./css/document.css" rel="stylesheet">
+        <link href="./css/github.css" rel="stylesheet" type="text/css" media="screen">
+        <link href="../better-weather/css/bw-style.min.css" rel="stylesheet">
+
+        <!-- Custom styles for this template -->
+		<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+		<!--[if lt IE 9]>
+		<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+		<script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+		<![endif]-->
+	</head>
+	<body data-spy="scroll" data-target="#sidebar" data-offset="100">
+		<div class="container">
+			<div class="row">
+
+                <div class="col-md-3 sidebar-container hidden-sm hidden-xs">
+
+                    <div id="sidebar" class="sidebar">
+                        <p class="theme-link"><a target="_blank" href="http://codecanyon.net/item/betterweather-standalone/7702441?ref=Better-Studio">BetterWeather</a><span class="version">v1.3</span></p>
+                        <ul class="nav bs-sidenav">
+                            <li><a href="#examples">Examples</a></li>
+                            <li><a href="#introduction">Introduction</a></li>
+                            <li><a href="#overview">1. Overview</a></li>
+                            <li><a href="#usage">2. Quick Setup</a></li>
+                            <li><a href="#forecast-api">3. Forecast.io API</a></li>
+                            <li><a href="#user-settings">4. Advanced Settings</a></li>
+                            <li><a href="#translation">5. Translation</a></li>
+                            <li><a href="#copyright-credits">Copyright &amp; Credits</a></li>
+                        </ul>
+                        <a target="_blank" class="better-studio-logo hidden-sm hidden-xs" href="http://codecanyon.net/user/Better-Studio?ref=Better-Studio">BetterStudio</a>
+                    </div>
+
+                </div>
+
+            <div class="col-md-9 col-md-12 content-col">
+
+                    <div class="row" id="examples">
+                        <div class="logo-col">
+                            <h1 class="logo"><a target="_blank" href="http://codecanyon.net/item/betterweather-standalone/7702441?ref=Better-Studio">BetterWeather standalone version</a></h1>
+                        </div>
+                    </div>
+
+                    <div class="row better-weather-examples">
+
+                        <div class="row">
+                            <div class="col-lg-11 col-md-12">
+
+                                <div id="weather-2"></div>
+
+                                <div class="row">
+                                    <div class="col-lg-10 col-md-12">
+
+                                        <div id="weather-4"></div>
+
+                                        <div class="row">
+                                            <div class="col-lg-12 col-md-12">
+                                                <div id="weather-5"></div>
+                                            </div>
+                                        </div>
+
+                                        <div class="row">
+                                            <div class="col-lg-10  col-md-12">
+                                                <div id="weather-7"></div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-2">
+                                        <div id="weather-6"></div>
+                                    </div>
+                                </div>
+
+                                <div id="weather-8"></div>
+
+                            </div>
+
+                            <div class="col-lg-1 col-md-12 ">
+                                <div id="weather-3"></div>
+                            </div>
+
+                        </div>
+
+
+                        <!-- Modern style - smaller than 400 pixel -->
+                        <div class="row">
+                            <div class="col-lg-5 col-md-5 col-sm-3">
+                                <div id="weather-9"></div>
+                            </div>
+                            <div class="col-lg-4  col-md-4 col-sm-3">
+                                <div id="weather-10"></div>
+                            </div>
+                            <div class="col-lg-2  col-md-2 col-sm-3">
+                                <div id="weather-11"></div>
+                            </div>
+                            <div class="col-lg-1 col-md-1 col-sm-3">
+                                <div id="weather-12"></div>
+                            </div>
+                        </div>
+
+
+                        <!-- Normal style - smaller than 400 pixel -->
+                        <div class="row">
+                            <div class="col-lg-5 col-md-5 col-sm-3">
+                                <div id="weather-13"></div>
+                            </div>
+                            <div class="col-lg-4 col-md-3 col-sm-3">
+                                <div id="weather-14"></div>
+                            </div>
+                            <div class="col-lg-2 col-md-2 col-sm-3">
+                                <div id="weather-15"></div>
+                            </div>
+                            <div class="col-lg-1 col-md-2 col-sm-3">
+                                <div id="weather-16"></div>
+                            </div>
+                        </div>
+
+                        <!-- Static color examples -->
+                        <div class="row hidden-xs hidden-sm hidden-md" style="width: 700px">
+                            <div class="col-lg-2">
+                                <div id="example-static-color-1"></div>
+                            </div>
+                            <div class="col-lg-2">
+                                <div id="example-static-color-2"></div>
+                            </div>
+                            <div class="col-lg-2">
+                                <div id="example-static-color-3"></div>
+                            </div>
+                            <div class="col-lg-2">
+                                <div id="example-static-color-4"></div>
+                            </div>
+                            <div class="col-lg-2">
+                                <div id="example-static-color-5"></div>
+                            </div>
+                            <div class="col-lg-2">
+                                <div id="example-static-color-6"></div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div id="example-state-sunrise" class="state-sunrise"></div>
+                            </div>
+                        </div>
+
+
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div id="example-state-sunset" class="state-sunset"></div>
+                            </div>
+                        </div>
+
+
+                        <!-- Envato State ;) -->
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div id="weather-18"></div>
+                            </div>
+                        </div>
+
+                        <!-- Inline modes -->
+                        <div class="row">
+
+                            <div class="col-lg-3 col-lg-offset-2">
+                                <span id="example-inline-large"></span>
+                            </div>
+                            <div class="col-lg-3 ">
+                                <span id="example-inline-normal"></span>
+                            </div>
+                            <div class="col-lg-3 text-center">
+                                <span id="example-inline-small"></span>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="doc-section first-section">
+						<div class="page-header">
+							<h1 id="introduction">BetterWeather - Standalone version</h1>
+							<h3>Documentation &amp; Usage</h3>
+						</div>
+
+						<p>First of all a huge <strong>THANK YOU</strong> for purchasing BetterWeather stand-alone version at Codecanyon.
+                            If you have any questions that are beyond the scope of this help file, please contact us from our Codecanyon profile <a href="http://codecanyon.net/user/Better-Studio?ref=Better-Studio">contact form</a>. You can also follow we on Codecanyon to keep track of all our plugin updates and future plugins and themes. Thanks so much!</p>
+
+						<p>
+                            Purchase page: <a href="http://codecanyon.net/item/betterweather-standalone/7702441?ref=Better-Studio">BetterWeather</a><br>
+                            Current version: 1.3<br>
+                            Updated: 2014/5/22<br>
+							By: BetterStudio<br>
+							Email: <a href="mailto:betterstudio.net@gmail.com">betterstudio.net@gmail.com</a><br>
+							Codecanyon Profile: <a href="http://codecanyon.net/user/Better-Studio?ref=Better-Studio">BetterStudio</a>
+						</p>
+					</div><!-- /doc-section -->
+
+                    <div class="doc-section">
+                        <div class="page-header">
+                            <h1 id="overview">1. Overview</h1>
+                        </div>
+
+                        <p>
+                            This is a beautiful and feature rich weather widget with powerful responsive design! just put that in anywhere with any width in your site and magic happens!.
+                        </p>
+
+                        <div class="alert alert-warning alert-dismissable">
+                            This script is a standalone that mean you can use it in both static and dynamic sites. <br> Currently this script haven't WordPress version but we are working on WordPress version that will release in next weeks.
+                        </div>
+
+                        <hr>
+
+                        <h3>Features</h3>
+
+                        <p>
+                            BetterWeather is a feature rich script!.
+                        </p>
+
+                        <ul>
+                            <li>10 Unique design for weather states and more are coming...<br><span class="text-muted">Clear Day, Clear Night, Rain, Snow, Sleet, Wind, Fog, Cloudy, Partly Cloudy Day and Partly Cloudy Night</span></li>
+                            <li>Automatically determine sunrise and sunset times and design uniquely will change</li>
+                            <li>Smart responsive design! layout will adopted automatically from 40 pixel width to 2000 pixel width!</li>
+                            <li>Auto detect user location via IP and fallback default location</li>
+                            <li>Animated and static icons for weather types</li>
+                            <li>Inline style for using in texts</li>
+                            <li>2 type of element design <span class="text-muted">( Normal and Modern )</span></li>
+                            <li>Showing current weather and next four days weather forecast <span class="text-muted">( Can be disabled )</span></li>
+                            <li>Static color for background</li>
+                            <li>Option to show temperature in Celsius and Fahrenheit units</li>
+                            <li>Fully translation & Retina ready!</li>
+                            <li>Use AJAX technology</li>
+                            <li>Inner cache for better speed</li>
+                            <li>and more...!</li>
+                        </ul>
+
+                        <hr>
+
+                        <h3>Requirements</h3>
+
+                        <p>
+                            BetterWeather developed on javascript jQuery plugin.
+                        </p>
+
+                        <ul>
+                            <li>jQuery <span class="text-muted">( Work with all versions )</span></li>
+                            <li>jQuery elementQuery plugin <span class="text-muted">( Attached )</span></li>
+                            <li>Skycons <span class="text-muted">( Attached )</span></li>
+                        </ul>
+
+                        <div class="alert alert-warning alert-dismissable">
+                            BetterWeather uses Forecast.io API. You can get a free API key with a simple sign up to the site ( <a href="#forecast-api">Sing up tutorial </a> ).
+                        </div>
+
+                        <hr>
+
+                        <h3>Browser Support</h3>
+
+                        <ul>
+                            <li>Mozilla Firefox 3+</li>
+                            <li>Google Chrome 10+</li>
+                            <li>Safari 3+</li>
+                            <li>iOS Safari</li>
+                            <li>Opera 10+</li>
+                            <li>Internet Explorer 8+</li>
+                        </ul>
+
+                    </div><!-- /doc-section -->
+
+
+                    <div class="doc-section">
+                        <div class="page-header">
+                            <h1 id="usage">2. Quick Setup</h1>
+                        </div>
+
+                        <p>
+                            Please note, that the following source codes are in HTML 5 markup. If you are using xHTML, please be aware of the differences.
+                        </p>
+
+                        <h3>Setup</h3>
+
+                        <p>
+                            At first copy and put <span class="highlight-text">better-weather</span> folder in anywhere in your server/project and Include the following lines into the head section of your page.
+                            <br>Of course the path can be different, depending where is <span class="highlight-text">better-weather</span> folder on your server.
+                        </p>
+
+                        <pre>
+                            <code data-language="html">
+&lt;!-- BetterWeather styles --&gt;
+&lt;link href=&quot;better-weather/css/bw-style.min.css&quot; rel=&quot;stylesheet&quot;&gt;
+                            </code>
+                        </pre>
+
+                        <p>
+                            and copy following code to bottom of your page before <code>&lt;/body&gt;</code> tag.
+                        </p>
+
+                        <pre>
+                            <code data-language="html">
+&lt;!-- jQuery, plugins and BetterWeather script--&gt;
+&lt;script src=&quot;better-weather/js/jquery.min.js&quot; type=&quot;text/javascript&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;better-weather/js/skycons.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;better-weather/js/elementQuery.min.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;better-weather/js/betterweather.min.js&quot;&gt;&lt;/script&gt;
+                            </code>
+                        </pre>
+
+                        <div class="alert alert-warning alert-dismissable">
+                            If in your page jQuery included before you can delete jQuery include line.
+                        </div>
+
+
+                        <h3>Loading the Script</h3>
+                        <p>
+                            You have to run this plugin like any other jQuery plugin:
+                        </p>
+
+<pre>
+<code data-language="javascript">
+$(selector).betterWeather({options});
+
+</code>
+</pre>
+
+                        <p>
+                            For example: if you want create a BetterWeather widget just create an empty div and set an id named betterweather <span class="text-muted"> or anything you want</span>, and call BetterWeather:
+                        </p>
+
+
+<pre>
+    <code data-language="html">
+        &lt;div id=&quot;betterweather&quot;&gt;&lt;/div&gt;
+    </code>
+</pre>
+
+
+
+<pre><code data-language="html">
+&lt;script type=&#39;text/javascript&#39;&gt;
+(function($){
+
+    $(&#39;#betterweather&#39;).betterWeather({
+        apiKey    : &#39;...&#39;,
+        location  : &#39;51.5171,-0.1062&#39;
+    });
+
+})(jQuery);
+&lt;/script&gt;
+</code></pre>
+
+                        <div class="alert alert-warning alert-dismissable">
+                            You must change <b>"..."</b> with your own API key for Forecast.io!. see: <a href="#forecast-api">Getting your own API key</a>
+                        </div>
+
+
+                        <h3 id="how-to-find-location">How to find an location value</h3>
+
+                        <p>You must specify location <span class="highlight-text">( latitude and longitude )</span> value for where you will show weather status. For finding this value just go to following url:</p>
+
+                        <p>
+                            <a target="_blank" href="http://forecast.io/">http://forecast.io/</a>
+                        </p>
+
+                        <p>
+                            In opened page type the location name:
+                        </p>
+
+                        <p class="text-center">
+                            <img src="img/forecast-1.png" alt="type location"/>
+                        </p>
+
+                        <p>
+                            After typing and hitting enter copy the number that highlighted in following picture from url:
+                        </p>
+
+                        <p class="text-center">
+                            <img src="img/forecast-2.png" alt=""/>
+                        </p>
+
+
+                        <div id="requests-note" class="alert alert-warning alert-dismissable">
+                            Forecast.io API key is free for 1000 requests per day! but BetterWeather have inner cache that save each location data for 30 minute.<br>
+                            You can use <b>20 BetterWeather widget</b> for different static location for <b>1 day just with 1 API key</b> without any payment and <b>Without worrying about visitors count!</b>. <br>
+                            But if you want show visitors location status then for over 1000 unique visitors then you must pay for extra visitors!.
+                        </div>
+
+                    </div><!-- /doc-section -->
+
+					<div class="doc-section">
+						<div class="page-header">
+							<h1 id="forecast-api">3. Forecast.io API</h1>
+						</div>
+						<p>
+                            The script uses weather API of <a target="_blank" href="http://forecast.io/">Forecast.io</a>. You can get a free API key with a simple sign up to the site.
+                            <br> <span class="text-muted">( Another sites/services API support will be added soon )</span>
+                        </p>
+
+						<h3>Getting your own API key</h3>
+						<p>
+                            You can get your own Forecast.io API key by clicking the following url.
+						</p>
+                        <p>
+                            <a target="_blank" href="https://developer.forecast.io/register">https://developer.forecast.io/register</a>
+                        </p>
+
+                        <p>
+                            In opened page enter your email and password and click on "Create an account".
+                        </p>
+
+                        <p class="text-center">
+                            <img src="img/forecast-signup-1.png" alt="Forecast.io sign up page"/>
+                        </p>
+
+                        <p>
+                            After you can see your API Key in bottom of page
+                        </p>
+
+                        <p class="text-center">
+                            <img src="img/forecast-signup-2.png" alt="Forecast.io sign up page"/>
+                        </p>
+
+					</div><!-- /doc-section -->
+
+                    <div class="doc-section">
+                        <div class="page-header">
+                            <h1 id="user-settings">4. Advanced Settings</h1>
+                        </div>
+
+                        <div class="alert alert-warning alert-dismissable">
+                            This options are for advance settings, for setup script see <a href="#usage">Quick Setup</a> section.
+                        </div>
+
+                        <p>
+                            You can use the following settings which are applied to the BetterWeather widget. You can have different settings to each of BetterWeather widget.
+                        </p>
+
+<pre><code data-language="javascript">
+$('#betterweather').betterWeather({
+
+    apiKey      :   "...",
+
+    location    :   "",
+    locationName:   "",
+    showLocation:   true,
+
+    showDate    :   true,
+
+    visitorLocation: false,
+
+    fontColor   :   "#fff",
+    bgColor     :   "#4f4f4f",
+    style       :   "normal", // Modern
+
+    nextDays    :   true,
+
+    animatedIcons:  true,
+    naturalBackground:  true,
+
+    url         :   "better-weather/ajax/ajax.php",
+
+    unit        :   "C" ,// F
+    showUnit    :   false,
+
+    mode        :   "widget" , // inline
+    inlineSize  :   "medium"  // small, medium, large
+});
+
+</code></pre>
+
+
+
+                        <table class="table table-bordered">
+                            <thead>
+                            <tr>
+                                <th style="width: 20%">Parameter</th>
+                                <th style="width: 80%">Description <span class="text-muted">and example if need</span></th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td><span class="highlight-text">apiKey</span></td>
+                                <td>
+                                    API Key for Forecast.io.
+                                    <br><br>see <a href="#forecast-api">Forecast.io API</a>
+                                    <br><br><span class="highlight-text">Required</span>
+                                    <br><br>Default:  empty
+
+
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td><span class="highlight-text">location</span></td>
+                                <td>
+                                    Specify location <span class="highlight-text">( latitude and longitude )</span> value for where you will show weather status.
+                                    <br><br> see <a href="#how-to-find-location">How to find location!?</a>
+
+
+                                    <br><br><span class="highlight-text">Required</span>
+                                    <br><br>Default:  <code>51.5171,-0.1062</code>
+
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td><span class="highlight-text">visitorLocation</span></td>
+                                <td>
+                                    Show forecast for visitors location! <br>
+                                    before using this you must read <a href="#requests-note">this note</a>.
+                                    <br/>
+                                    <br/>
+                                    You must set a default location for when visitors location not founded from their IP address.
+
+                                    <br><br><span class="highlight-text">Optional</span>
+                                    <br><br>Default:  <code>false</code>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td><span class="highlight-text">locationName</span></td>
+                                <td>
+                                    You can set location name of <code>location</code> for everything you want! if this field not specified location name retrieved from Forecast.io.
+
+                                    <br><br><span class="highlight-text">Optional</span>
+                                    <br><br>Default:  Location name retried from Forecast.io
+                                </td>
+                            </tr>
+
+
+                            <tr>
+                                <td><span class="highlight-text">showLocation</span></td>
+                                <td>
+                                    You can hide showing location name with setting this option with <span class="highlight-text">false</span> value.
+
+                                    <br><br><span class="highlight-text">Optional</span>
+                                    <br><br>Default:  <code>true</code>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td><span class="highlight-text">showLocation</span></td>
+                                <td>
+                                    You can hide location name with setting this option with <span class="highlight-text">false</span> value.
+
+                                    <br><br><span class="highlight-text">Optional</span>
+                                    <br><br>Default:  <code>true</code>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td><span class="highlight-text">showDate</span></td>
+                                <td>
+                                    You can hide date with setting this option with <span class="highlight-text">false</span> value.
+
+                                    <br><br><span class="highlight-text">Optional</span>
+                                    <br><br>Default:  <code>true</code>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td><span class="highlight-text">fontColor</span></td>
+                                <td>
+                                    Color of fonts and icons in BetterWeather.
+
+                                    <br><br><span class="highlight-text">Optional</span>
+                                    <br><br>Default:  <code>#fff</code>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td id="bgcolor-info"><span class="highlight-text">bgColor</span></td>
+                                <td>
+                                    Color of widget background. Note, if <code>naturalBackground</code> value is <code>true</code> then bdColor not worked because this colored will override with natural style for widget!!.
+
+                                    <br/>
+                                    <br/>
+                                    <div class="row">
+
+                                        <div class="col-lg-5 col-md-6  col-sm-6 col-xs-6 col-lg-offset-1">
+                                            <div id="demo-static-bg"></div>
+                                            <br/>
+                                            <p class="text-center"><span class="highlight-text">Static background color</span>
+                                                <br/>
+                                                <code>bgColor : "#4f4f4f"</code><br>
+                                                <code>naturalBackground : false</code>
+                                            </p>
+                                            <br/>
+                                        </div>
+
+                                        <div class="col-lg-5 col-md-6 col-sm-6  col-xs-6">
+                                            <div id="demo-natural-bg"></div>
+                                            <br/>
+                                            <p class="text-center"><span class="highlight-text">"normal" style</span></p>
+                                            <br/>
+                                        </div>
+
+                                    </div>
+
+
+                                    <br><br><span class="highlight-text">Optional</span>
+                                    <br><br>Default:  <code>#e0e0e0</code>
+                                </td>
+
+                            </tr>
+
+                            <tr>
+                                <td><span class="highlight-text">style</span></td>
+                                <td>
+                                    <p>
+                                        BetterWidget have 2 different type of design: <b>Normal</b> and <b>Modern</b>!
+                                        <br>Example:
+                                    </p>
+
+                                    <div class="row">
+
+                                        <div class="col-lg-5 col-md-6  col-sm-6 col-xs-6 col-lg-offset-1">
+                                            <div id="demo-modern-weather"></div>
+                                            <br/>
+                                            <p class="text-center"><span class="highlight-text">"modern" style</span></p>
+                                            <br/>
+                                        </div>
+
+                                        <div class="col-lg-5 col-md-6 col-sm-6  col-xs-6">
+                                            <div id="demo-normal-weather"></div>
+                                            <br/>
+                                            <p class="text-center"><span class="highlight-text">"normal" style</span></p>
+                                            <br/>
+                                        </div>
+
+                                    </div>
+
+                                    <br><span class="highlight-text">Optional</span>
+                                    <br><br>Default:  <code>normal</code>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td><span class="highlight-text">nextDays</span></td>
+                                <td>
+                                    <p>
+                                        For Showing/Hiding next days forecast.
+                                    </p>
+
+                                    <div class="row">
+                                        <div class="col-lg-5">
+                                            <div id="demo-weather-without-days"></div>
+                                            <br/>
+                                        </div>
+
+                                        <div class="col-lg-5">
+                                            <div id="demo-weather-with-days"></div>
+                                            <br/>
+                                        </div>
+
+                                        <div class="col-lg-2">
+                                            <div id="demo-weather-without-days-2"></div>
+                                            <br/>
+                                        </div>
+                                    </div>
+
+                                    <br><br><span class="highlight-text">Optional</span>
+                                    <br><br>Default:  <code>true</code>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td><span class="highlight-text">animatedIcons</span></td>
+                                <td>
+                                    with <code>true</code> value animated icons will shown and with <code>false</code> static icons without animation will shown.
+
+                                    <div class="row">
+
+                                        <div class="col-lg-5 col-md-6  col-sm-6 col-xs-6 col-lg-offset-1">
+                                            <div id="demo-animated-icon"></div>
+                                            <br/>
+                                            <p class="text-center"><span class="highlight-text">Animated Icons</span></p>
+                                            <br/>
+                                        </div>
+
+                                        <div class="col-lg-5 col-md-6 col-sm-6  col-xs-6">
+                                            <div id="demo-static-icon"></div>
+                                            <br/>
+                                            <p class="text-center"><span class="highlight-text">Static Icons</span></p>
+                                            <br/>
+                                        </div>
+
+                                    </div>
+
+                                    <br><br><span class="highlight-text">Optional</span>
+                                    <br><br>Default:  <code>true</code>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td><span class="highlight-text">naturalBackground</span></td>
+                                <td>
+                                    If value set to <code>true</code> each state will have uniquely background and if set to <code>false</code> background color will be value of <code>bgColor</code> or default.
+
+                                    <br><br><span class="highlight-text">Optional</span>
+                                    <br><br>Default:  <code>true</code>
+                                    <br><br>Examples in <a href="#bgcolor-info"><code>bgColor</code></a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><span class="highlight-text">unit</span></td>
+                                <td>
+                                    You can show temperatures in two unit: Fahrenheit and Celsius
+                                    <br/>
+                                    <br/>
+                                    <div class="row">
+
+                                        <div class="col-lg-5 col-md-6  col-sm-6 col-xs-6 col-lg-offset-1">
+                                            <div id="demo-celsius"></div>
+                                            <br/>
+                                            <p class="text-center"><span class="highlight-text">"C" for Celsius unite</span></p>
+                                            <br/>
+                                        </div>
+
+                                        <div class="col-lg-5 col-md-6 col-sm-6  col-xs-6">
+                                            <div id="demo-fahrenheit"></div>
+                                            <br/>
+                                            <p class="text-center"><span class="highlight-text">"F" for Fahrenheit unite</span></p>
+                                            <br/>
+                                        </div>
+
+                                    </div>
+
+                                    <br><br><span class="highlight-text">Optional</span>
+                                    <br><br>Default:  <code>C</code>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td><span class="highlight-text">showUnit</span></td>
+                                <td>
+                                    You can show temperatures unit in BetterWeather with setting <code>true</code> value to this option.
+                                    <br/>
+                                    <br/>
+                                    <div class="row">
+
+                                        <div class="col-lg-5 col-md-6  col-sm-6 col-xs-6 col-lg-offset-1">
+                                            <div id="demo-celsius-show"></div>
+                                            <br/>
+                                            <p class="text-center"><span class="highlight-text">Showing Celsius unit</span></p>
+                                            <br/>
+                                        </div>
+
+                                        <div class="col-lg-5 col-md-6 col-sm-6  col-xs-6">
+                                            <div id="demo-fahrenheit-show"></div>
+                                            <br/>
+                                            <p class="text-center"><span class="highlight-text">Showing Fahrenheit unit</span></p>
+                                            <br/>
+                                        </div>
+
+                                    </div>
+
+                                    <br><br><span class="highlight-text">Optional</span>
+                                    <br><br>Default:  <code>C</code>
+                                </td>
+                            </tr>
+
+
+                            <tr>
+                                <td><span class="highlight-text">mode</span></td>
+                                <td>
+                                    For changing mode between inline and widget! <br>
+
+                                    <br/>
+                                    <div class="row">
+
+                                        <div class="col-lg-4 col-md-6  col-sm-6 col-xs-6 col-lg-offset-1">
+                                            <div id="demo-mode-widget"></div>
+                                            <br/>
+                                            <p class="text-center">
+                                                <span class="highlight-text">Widget mode</span><br>
+                                                <code>mode : "widget"</code>
+                                            </p>
+                                            <br/>
+                                        </div>
+
+                                        <div class="col-lg-5 col-md-6 col-sm-6  col-xs-6  col-lg-offset-1">
+                                            <div id="demo-mode-inline"></div>
+                                            <br/>
+                                            <p class="text-center">
+                                                <span class="highlight-text">Inline style</span><br>
+                                                <code>mode : "inline"</code>
+                                            </p>
+                                            <br/>
+                                        </div>
+
+                                    </div>
+
+
+                                    <br><br><span class="highlight-text">Optional</span>
+                                    <br><br>Default:  <code>widget</code>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td><span class="highlight-text">inlineSize</span></td>
+                                <td>
+                                    For changing inline size:<br>
+
+                                    <br/>
+                                    <br/>
+
+                                    <div id="demo-inline-large"></div>
+                                    <br/>
+                                    <p>
+                                        <span class="highlight-text">Inline Large size</span><br>
+                                        <code>inlineSize: "large"</code>
+                                    </p>
+                                    <br/>
+                                    <br/>
+                                    <div id="demo-inline-medium"></div>
+                                    <br/>
+                                    <p>
+                                        <span class="highlight-text">Inline Medium size</span><br>
+                                        <code>inlineSize: "medium"</code>
+                                    </p>
+                                    <br/>
+                                    <br/>
+                                    <div id="demo-inline-small"></div>
+                                    <br/>
+                                    <p>
+                                        <span class="highlight-text">Inline Small size</span><br>
+                                        <code>inlineSize: "small"</code>
+                                    </p>
+
+                                    <br><br><span class="highlight-text">Optional</span>
+                                    <br><br>Default:  <code>medium</code>
+                                </td>
+                            </tr>
+
+
+
+
+
+
+                            <tr>
+                                <td><span class="highlight-text">url</span></td>
+                                <td>
+                                    the URL of <code>ajax.php</code> file that is a wrapper between BetterWeather and Forecast.io for cache functionality.
+                                    <br> Note, currently that file available only for PHP and another programing languages will be added in next weeks.
+
+                                    <br><br><span class="highlight-text">Optional</span>
+                                    <br><br>Default: <code>/better-weather/ajax/ajax.php</code>
+                                </td>
+                            </tr>
+
+                            </tbody>
+                        </table>
+
+                    </div><!-- /doc-section -->
+
+
+                    <div class="doc-section">
+						<div class="page-header">
+							<h1 id="translation">5. Translation</h1>
+						</div>
+
+						<p>
+                            You can change the language both of the weather types and the UI.<br> For changing just put following code to your page and change value for each parameter in your local language.
+						</p>
+
+<pre><code data-language="html">
+&lt;script type=&#39;text/javascript&#39;&gt;
+var BW_Localized = {
+    monthList: {
+        January     : &#39;January&#39;,
+        February    : &#39;February&#39;,
+        March       : &#39;March&#39;,
+        April       : &#39;April&#39;,
+        May         : &#39;May&#39;,
+        June        : &#39;June&#39;,
+        July        : &#39;July&#39;,
+        August      : &#39;August&#39;,
+        September   : &#39;September&#39;,
+        October     : &#39;October&#39;,
+        November    : &#39;November&#39;,
+        December    : &#39;December&#39;
+    },
+    daysList: {
+        Sat : &#39;Sat&#39;,
+        Sun : &#39;Sun&#39;,
+        Mon : &#39;Mon&#39;,
+        Tue : &#39;Tue&#39;,
+        Wed : &#39;Wed&#39;,
+        Thu : &#39;Thu&#39;,
+        Fri : &#39;Fri&#39;
+    },
+    stateList: {
+        clear           : &#39;Clear&#39;,
+        rain            : &#39;Rain&#39;,
+        snow            : &#39;Snow&#39;,
+        sleet           : &#39;Sleet&#39;,
+        wind            : &#39;Wind&#39;,
+        foggy           : &#39;Foggy&#39;,
+        cloudy          : &#39;Cloudy&#39;,
+        mostly_cloudy   : &#39;Mostly Cloudy&#39;,
+        partly_cloudy   : &#39;Partly Cloudy&#39;,
+        thunderstorm    : &#39;Thunderstorm&#39;,
+        drizzle         : &#39;Drizzle&#39;,
+        light_Rain      : &#39;Light Rain&#39;,
+        overcast        : &#39;Overcast&#39;,
+        breezy_and_Partly_Cloudy: &#39;Breezy and Partly Cloudy&#39;
+    }
+} ;
+&lt;/script&gt;
+
+</code></pre>
+
+					</div><!-- /doc-section -->
+
+
+
+					<div class="doc-section">
+						<div class="page-header">
+							<h1 id="copyright-credits">Copyright &amp; Credits</h1>
+						</div>
+
+						<h3>Images used:</h3>
+
+                        <ul>
+                            <li><a target="_blank" href="http://photodune.net/item/snow/1916074">http://photodune.net/item/snow/1916074</a> - <span class="highlight-text">Extend License and Owner permission</span></li>
+                            <li><a target="_blank" href="http://photodune.net/item/cloudscape-rain-clouds/1594474">http://photodune.net/item/cloudscape-rain-clouds/1594474</a> - <span class="highlight-text">Extend License and Owner permission</span></li>
+                            <li><a target="_blank" href="http://photodune.net/item/sunrise/5133182">http://photodune.net/item/sunrise/5133182</a> - <span class="highlight-text">Extend License and Owner permission</span></li>
+                            <li><a target="_blank" href="http://photodune.net/item/sunset/1553801">http://photodune.net/item/sunset/1553801</a> - <span class="highlight-text">Extend License and Owner permission</span></li>
+                            <li><a target="_blank" href="http://photodune.net/item/tucson-lightning/555281">http://photodune.net/item/tucson-lightning/555281</a> - <span class="highlight-text">Extend License and Owner permission</span></li>
+                            <li><a target="_blank" href="http://photodune.net/item/foggy-mysterious-forest/4727639">http://photodune.net/item/foggy-mysterious-forest/4727639</a> - <span class="highlight-text">Extend License and Owner permission</span></li>
+                            <li>Other images from <a href="http://splitshire.com/">Splitshire</a> and <a href="http://unsplash.com/">Unsplash</a> and we contacted them for using images.</li>
+                        </ul>
+
+
+                        <div class="alert alert-warning alert-dismissable">
+                            If you think your photos is good for BetterWeather, <a href="mailto:betterstudio.net@gmail.com">contact us :)</a> we will be glad to use them in next updates!.
+                        </div>
+
+
+                        <hr>
+
+						<h3>jQuery Plugins</h3>
+						<ul>
+                            <li><a href="https://github.com/tysonmatanich/elementQuery" target="_blank">elementQuery</a></li>
+							<li><a href="http://darkskyapp.github.io/skycons/" target="_blank">Skycons</a></li>
+                        </ul>
+					</div><!-- /doc-section -->
+
+					<footer>
+						<p>Once again, thank you so much for purchasing BetterWeather. As I said at the beginning, I'd be glad to help you if you have any questions relating to BetterWeather. No guarantees, but I'll do my best to assist.
+                            If you have a more general question relating to BetterWeather, please contact us from our Codecanyon profile <a href="http://codecanyon.net/user/Better-Studio?ref=Better-Studio#contact">contact form</a>.</p>
+						<strong>BetterStudio</strong>
+					</footer>
+					
+				</div>
+
+			</div>
+		</div>
+
+		<!-- /container -->
+		<!-- Bootstrap core JavaScript
+			================================================== -->
+		<!-- Placed at the end of the document so the pages load faster -->
+		<script src="./js/jquery-1.10.1.min.js"></script>
+		<script src="./bootstrap/js/bootstrap.min.js"></script>
+        <script src="./js/rainbow-custom.min.js"></script>
+        <script src="./js/document.js"></script>
+
+        <script src="../better-weather/js/skycons.js"></script>
+        <script src="../better-weather/js/elementQuery.min.js"></script>
+        <script src="../better-weather/js/betterweather.min.js"></script>
+
+        <script type='text/javascript'>
+            var BW_Localized = {
+                apiKey: '68f8c34082a9d39ed4c038a9ff4c22b1',
+                monthList: {
+                    January     : 'January',
+                    February    : 'February',
+                    March       : 'March',
+                    April       : 'April',
+                    May         : 'May',
+                    June        : 'June',
+                    July        : 'July',
+                    August      : 'August',
+                    September   : 'September',
+                    October     : 'October',
+                    November    : 'November',
+                    December    : 'December'
+                },
+                daysList: {
+                    Sat : 'Sat',
+                    Sun : 'Sun',
+                    Mon : 'Mon',
+                    Tue : 'Tue',
+                    Wed : 'Wed',
+                    Thu : 'Thu',
+                    Fri : 'Fri'
+                },
+                stateList: {
+                    clear           : 'Clear',
+                    rain            : 'Rain',
+                    snow            : 'Snow',
+                    sleet           : 'Sleet',
+                    wind            : 'Wind',
+                    fog             : 'Fog',
+                    cloudy          : 'Cloudy',
+                    mostly_cloudy   : 'Mostly Cloudy',
+                    partly_cloudy   : 'Partly Cloudy',
+                    thunderstorm    : 'Thunderstorm',
+                    drizzle         : 'Drizzle',
+                    light_Rain      : 'Light Rain',
+                    overcast        : 'Overcast',
+                    breezy_and_Partly_Cloudy: 'Breezy and Partly Cloudy'
+                }
+            } ;
+        </script>
+
+
+        <script>
+//            var doc_ajax_url = "../better-weather/ajax/ajax.php";
+            var doc_ajax_url = "http://better-studio.net/plugins/better-weather/better-weather/ajax/ajax.php";
+        </script>
+
+        <script>
+            (function($){
+                $('#weather-2').betterWeather({
+                    apiKey: "c2c774174c5762126a9c96043a917a45",
+                    style:  "modern",
+                    nextDays: true ,
+                    bgColor: '#333',
+                    location: '25.7748,-80.1977',
+                    animatedIcons: true,
+                    url:   doc_ajax_url
+                });
+
+                $('#weather-3').betterWeather({
+                    apiKey: "68f8c34082a9d39ed4c038a9ff4c22b1",
+                    style:  "modern",
+                    nextDays: true ,
+                    bgColor: '#333',
+                    location: '35.6705,139.7409',
+                    animatedIcons: true,
+                    url         :   doc_ajax_url
+                });
+
+                $('#weather-4').betterWeather({
+                    apiKey: "68f8c34082a9d39ed4c038a9ff4c22b1",
+                    style:  "modern",
+                    nextDays: true ,
+                    bgColor: '#333',
+                    location: '38.8991,-77.0290',
+                    animatedIcons: true,
+                    url         :   doc_ajax_url
+                });
+
+                $('#weather-5').betterWeather({
+                    apiKey: "68f8c34082a9d39ed4c038a9ff4c22b1",
+                    style:  "modern",
+                    nextDays: false ,
+                    bgColor: '#333',
+                    location: '-15.7785,-47.9287',
+                    animatedIcons: true,
+                    url         :   doc_ajax_url
+                });
+
+                $('#weather-6').betterWeather({
+                    apiKey: "68f8c34082a9d39ed4c038a9ff4c22b1",
+                    style:  "modern",
+                    nextDays: false ,
+                    bgColor: '#333',
+                    location: '65.2019,-18.8894',
+                    animatedIcons: false,
+                    url         :   doc_ajax_url
+                });
+                $('#weather-7').betterWeather({
+                    apiKey: "68f8c34082a9d39ed4c038a9ff4c22b1",
+                    style:  "modern",
+                    nextDays: true ,
+                    bgColor: '#333',
+                    location: '3.4921,103.3938',
+                    animatedIcons: true,
+                    url         :   doc_ajax_url
+                });
+                $('#weather-8').betterWeather({
+                    apiKey: "68f8c34082a9d39ed4c038a9ff4c22b1",
+                    style:  "modern",
+                    nextDays: false ,
+                    bgColor: '#333',
+                    location: '38.9577,35.2469',
+                    animatedIcons: false,
+                    url         :   doc_ajax_url
+                });
+                $('#weather-9').betterWeather({
+                    apiKey: "68f8c34082a9d39ed4c038a9ff4c22b1",
+                    style:  "modern",
+                    nextDays: false ,
+                    bgColor: '#333',
+                    location: '14.6953,-17.4505',
+                    animatedIcons: true,
+                    url         :   doc_ajax_url
+                });
+                $('#weather-10').betterWeather({
+                    apiKey: "68f8c34082a9d39ed4c038a9ff4c22b1",
+                    style:  "modern",
+                    nextDays: false ,
+                    bgColor: '#333',
+                    location: '34.6440,50.8910',
+                    animatedIcons: true,
+                    url         :   doc_ajax_url
+                });
+                $('#weather-11').betterWeather({
+                    apiKey: "68f8c34082a9d39ed4c038a9ff4c22b1",
+                    style:  "modern",
+                    nextDays: false ,
+                    bgColor: '#333',
+                    location: '60.4720,8.4689',
+                    animatedIcons: true,
+                    url         :   doc_ajax_url
+                });
+                $('#weather-12').betterWeather({
+                    apiKey: "68f8c34082a9d39ed4c038a9ff4c22b1",
+                    style:  "normal",
+                    nextDays: false ,
+                    bgColor: '#333',
+                    location: '28.3948,84.1278',
+                    locationName: 'Nepal',
+                    animatedIcons: true,
+                    url         :   doc_ajax_url
+                });
+                $('#weather-13').betterWeather({
+                    apiKey: "68f8c34082a9d39ed4c038a9ff4c22b1",
+                    style:  "normal",
+                    nextDays: true ,
+                    bgColor: '#333',
+                    location: '32.9914,138.4602',
+                    animatedIcons: true,
+                    url         :   doc_ajax_url
+                });
+                $('#weather-14').betterWeather({
+                    apiKey: "68f8c34082a9d39ed4c038a9ff4c22b1",
+                    style:  "normal",
+                    nextDays: true ,
+                    bgColor: '#333',
+                    location: '65.2019,-18.8894',
+                    locationName: 'Iceland',
+                    animatedIcons: true,
+                    url         :   doc_ajax_url
+                });
+                $('#weather-15').betterWeather({
+                    apiKey: "68f8c34082a9d39ed4c038a9ff4c22b1",
+                    style:  "normal",
+                    nextDays: true ,
+                    bgColor: '#333',
+                    location: '77.5899,23.6530',
+                    animatedIcons: true,
+                    url         :   doc_ajax_url
+                });
+                $('#weather-16').betterWeather({
+                    apiKey: "68f8c34082a9d39ed4c038a9ff4c22b1",
+                    style:  "normal",
+                    nextDays: false ,
+                    bgColor: '#d05b25',
+                    location: '-16.7417,-1.6685',
+                    naturalBackground: false,
+                    animatedIcons: true,
+                    url         :   doc_ajax_url
+                });
+                $('#weather-18').betterWeather({
+                    apiKey: "68f8c34082a9d39ed4c038a9ff4c22b1",
+                    style:  "normal",
+                    nextDays: false ,
+                    bgColor: '#333',
+                    location: '-37.817314,144.955431',
+                    locationName: 'Envato!',
+                    animatedIcons: true,
+                    url         :   doc_ajax_url
+                });
+
+
+                // state sunrise& sunset
+                $('#example-state-sunrise').betterWeather({
+                    style:  "normal",
+                    nextDays: false ,
+                    bgColor: '#333',
+                    location: '60.4720,8.4689',
+                    locationName: 'Sunrise Example',
+                    animatedIcons: true,
+                    url         :   doc_ajax_url
+                });
+                $('#example-state-sunset').betterWeather({
+                    style:  "normal",
+                    nextDays: false ,
+                    bgColor: '#333',
+                    location: '60.4720,8.4689',
+                    locationName: 'Sunset Example',
+                    animatedIcons: true,
+                    url         :   doc_ajax_url
+                });
+
+                // Inline mode examples
+                $('#example-inline-large').betterWeather({
+                    location: '14.6953,-17.4505',
+                    animatedIcons: true,
+                    fontColor: "#333",
+                    url         :   doc_ajax_url,
+
+                    mode : "inline",
+                    inlineSize: "large"
+                });
+
+                $('#example-inline-normal').betterWeather({
+                    location: '-16.7417,-1.6685',
+                    animatedIcons: true,
+                    fontColor: "#333",
+                    url         :   doc_ajax_url,
+
+                    mode : "inline",
+                    inlineSize: "medium"
+                });
+
+                $('#example-inline-small').betterWeather({
+                    location: '60.4720,8.4689',
+                    animatedIcons: true,
+                    fontColor: "#333",
+                    url         :   doc_ajax_url,
+
+                    mode : "inline",
+                    inlineSize: "small"
+                });
+
+                /* example-static-color */
+                $('#example-static-color-1').betterWeather({
+                    location: '60.4720,8.4689',
+                    animatedIcons: true,
+                    bgColor: "#dd2932",
+                    naturalBackground: false,
+                    url         :   doc_ajax_url
+                });
+                $('#example-static-color-2').betterWeather({
+                    location: '60.4720,8.4689',
+                    animatedIcons: true,
+                    bgColor: "#D93",
+                    naturalBackground: false,
+                    url         :   doc_ajax_url
+                });
+                $('#example-static-color-3').betterWeather({
+                    location: '60.4720,8.4689',
+                    animatedIcons: true,
+                    bgColor: "#8224E3",
+                    naturalBackground: false,
+                    url         :   doc_ajax_url
+                });
+                $('#example-static-color-4').betterWeather({
+                    location: '60.4720,8.4689',
+                    animatedIcons: false,
+                    bgColor: "#1E73BE",
+                    naturalBackground: false,
+                    url         :   doc_ajax_url
+                });
+                $('#example-static-color-5').betterWeather({
+                    location: '60.4720,8.4689',
+                    animatedIcons: false,
+                    bgColor: "#328b2d",
+                    naturalBackground: false,
+                    url         :   doc_ajax_url
+                });
+                $('#example-static-color-6').betterWeather({
+                    location: '60.4720,8.4689',
+                    animatedIcons: true,
+                    bgColor: "#d05b25",
+                    naturalBackground: false,
+                    url         :   doc_ajax_url
+                });
+            })(jQuery);
+        </script>
+
+
+        <script>
+            (function($){
+                // Modern and Normal style
+                $('#demo-modern-weather').betterWeather({
+                    style:  "modern",
+                    nextDays: false ,
+                    bgColor: '#333',
+                    location: '-37.817314,144.955431',
+                    animatedIcons: true,
+                    url         :   doc_ajax_url
+                });
+                $('#demo-normal-weather').betterWeather({
+                    style:  "normal",
+                    nextDays: false ,
+                    bgColor: '#333',
+                    location: '-37.817314,144.955431',
+                    animatedIcons: true,
+                    url         :   doc_ajax_url
+                });
+
+                // Days examples
+                $('#demo-weather-without-days').betterWeather({
+                    style:  "modern",
+                    nextDays: false ,
+                    bgColor: '#333',
+                    location: '60.4720,8.4689',
+                    animatedIcons: true,
+                    url         :   doc_ajax_url
+                });
+                $('#demo-weather-without-days-2').betterWeather({
+                    style:  "modern",
+                    nextDays: false ,
+                    bgColor: '#333',
+                    location: '60.4720,8.4689',
+                    animatedIcons: true,
+                    url         :   doc_ajax_url
+                });
+                $('#demo-weather-with-days').betterWeather({
+                    style:  "normal",
+                    nextDays: true ,
+                    bgColor: '#333',
+                    location: '60.4720,8.4689',
+                    animatedIcons: true,
+                    url         :   doc_ajax_url
+                });
+
+                // Static and natural bg
+                $('#demo-static-bg').betterWeather({
+                    style:  "normal",
+                    nextDays: true ,
+                    bgColor: '#D05B25',
+                    location: '60.4720,8.4689',
+                    naturalBackground: false,
+                    animatedIcons: true,
+                    url         :   doc_ajax_url
+                });
+                $('#demo-natural-bg').betterWeather({
+                    style:  "normal",
+                    nextDays: true ,
+                    bgColor: '#333',
+                    location: '60.4720,8.4689',
+                    animatedIcons: true,
+                    url         :   doc_ajax_url
+                });
+
+                // Icon Types
+                $('#demo-animated-icon').betterWeather({
+                    style:  "normal",
+                    nextDays: true ,
+                    bgColor: '#D05B25',
+                    location: '60.4720,8.4689',
+                    naturalBackground: true,
+                    animatedIcons: true,
+                    url         :   doc_ajax_url
+                });
+                $('#demo-static-icon').betterWeather({
+                    style:  "normal",
+                    nextDays: true ,
+                    bgColor: '#333',
+                    location: '60.4720,8.4689',
+                    animatedIcons: false,
+                    url         :   doc_ajax_url
+                });
+
+                $('#demo-mode-widget').betterWeather({
+                    style:  "normal",
+                    nextDays: false ,
+                    bgColor: '#333',
+                    location: '60.4720,8.4689',
+                    animatedIcons: false,
+                    mode:   "widget",
+                    url         :   doc_ajax_url
+                });
+                $('#demo-mode-inline').betterWeather({
+                    style:  "normal",
+                    nextDays: true ,
+                    bgColor: '#333',
+                    fontColor: '#333',
+                    location: '60.4720,8.4689',
+                    animatedIcons: false,
+                    mode:   "inline",
+                    inlineSize:   "large",
+                    url         :   doc_ajax_url
+                });
+
+                $('#demo-inline-large').betterWeather({
+                    style:  "normal",
+                    nextDays: true ,
+                    bgColor: '#333',
+                    fontColor: '#333',
+                    location: '60.4720,8.4689',
+                    animatedIcons: false,
+                    mode:   "inline",
+                    inlineSize:   "large",
+                    url         :   doc_ajax_url
+                });
+
+                $('#demo-inline-medium').betterWeather({
+                    style:  "normal",
+                    nextDays: true ,
+                    bgColor: '#333',
+                    fontColor: '#333',
+                    location: '60.4720,8.4689',
+                    animatedIcons: false,
+                    mode:   "inline",
+                    inlineSize:   "medium",
+                    url         :   doc_ajax_url
+                });
+
+                $('#demo-inline-small').betterWeather({
+                    style:  "normal",
+                    nextDays: true ,
+                    bgColor: '#333',
+                    fontColor: '#333',
+                    location: '60.4720,8.4689',
+                    animatedIcons: false,
+                    mode:   "inline",
+                    inlineSize:   "small",
+                    url         :   doc_ajax_url
+                });
+
+                $('#demo-celsius').betterWeather({
+                    style:  "modern",
+                    nextDays: false ,
+                    location: '60.4720,8.4689',
+                    animatedIcons: true,
+                    url         :   doc_ajax_url,
+                    unit: 'C'
+                });
+                $('#demo-fahrenheit').betterWeather({
+                    style:  "modern",
+                    nextDays: false,
+                    location: '60.4720,8.4689',
+                    animatedIcons: true,
+                    url         :   doc_ajax_url,
+                    unit: 'F'
+                });
+                $('#demo-celsius-show').betterWeather({
+                    style:  "modern",
+                    nextDays: false ,
+                    location: '60.4720,8.4689',
+                    animatedIcons: true,
+                    url         :   doc_ajax_url,
+                    unit: 'C',
+                    showUnit: true
+                });
+                $('#demo-fahrenheit-show').betterWeather({
+                    style:  "modern",
+                    nextDays: false,
+                    location: '60.4720,8.4689',
+                    animatedIcons: true,
+                    url         :   doc_ajax_url,
+                    unit: 'F',
+                    showUnit: true
+                });
+
+            })(jQuery);
+        </script>
+
+	</body>
+</html>
