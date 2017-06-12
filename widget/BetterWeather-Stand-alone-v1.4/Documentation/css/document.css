@@ -1,0 +1,207 @@
+/* -----------------------------------------------------------------------------
+ * Affix
+ * -------------------------------------------------------------------------- */
+.body {
+  position: relative;
+}
+.affix {
+	position: static;
+}
+
+@media (min-width: 992px) {
+	.affix {
+	  width: 213px;
+	  position: fixed;
+	  top: 0;
+	}
+
+	.affix-bottom {
+	  width: inherit;
+	  position: absolute;
+	  top: auto;
+	  bottom: 200px;
+	}
+
+	.affix-top {}
+}
+
+@media (min-width: 1200px) {
+	.affix { width: 263px; }
+}
+
+#sidebar {
+	padding: 30px 0;
+}
+
+pre,.alert {
+    border-radius: 2px !important;
+}
+
+/* -----------------------------------------------------------------------------
+ * Nav
+ * -------------------------------------------------------------------------- */
+.bs-sidenav ul {
+	font-size: 0.9em;
+	margin-left: 20px;
+	display: none;
+}
+
+.bs-sidenav a {
+	text-transform: capitalize;
+	font-size: 14px;
+    color: #353535;
+}
+
+.bs-sidenav .active > a {
+	font-weight: bold;
+}
+
+.bs-sidenav .active ul {
+	display: block;
+}
+
+.nav>li>a {
+	padding: 5px 10px;
+}
+
+/* -----------------------------------------------------------------------------
+ * Jumbotron
+ * -------------------------------------------------------------------------- */
+.header {
+	background-color: #000;
+}
+
+.header-container {
+	padding: 60px 30px;
+}
+
+/* -----------------------------------------------------------------------------
+ * Document
+ * -------------------------------------------------------------------------- */
+ body { line-height: 1.6em; }
+.page-header { border-bottom: 2px solid #F0F0F0;; margin-bottom: 30px; margin-top: 0; }
+.page-header h1 { font-size: 1.8em; font-weight: bold; margin-top: 0;}
+.page-header h3 { font-weight: normal; }
+
+.doc-section + .doc-section { margin-top: 60px; }
+.doc-section li { margin-top: 10px; }
+.doc-section img {
+	margin: 15px 0;
+	padding: 5px;
+	border: 2px solid #ddd;
+	max-width: 100%;
+}
+.doc-section table img {
+    margin: 0;
+    border: none;
+}
+
+h3{
+    font-size: 20px;
+}
+h3 + * { margin-top: 20px; }
+hr {
+	margin-top: 30px;
+	margin-bottom: 30px;
+	border: 0;
+	border-top: 1px solid #ddd;
+}
+
+footer {
+	margin: 60px 0;
+	padding-top: 30px;
+	border-top: 1px solid #ddd;
+}
+
+body{
+    background-color: #E7E7E7;
+}
+
+.doc-section{
+    margin-bottom: 30px;
+    background-color: #fff;
+    -moz-box-shadow: 0 1px 2px #adadad;
+    -webkit-box-shadow: 0 1px 2px #adadad;
+    box-shadow: 0 1px 2px #adadad;
+    padding: 35px;
+}
+
+.better-studio-logo{
+    display: inline-block;
+    /*position: fixed;*/
+    bottom: 20px;
+    width: 100%;
+    height: 140px;
+    background: url(../img/BetterStudio-Logo.png) no-repeat center top;
+    text-indent: -9999px;
+    overflow: hidden;
+    padding-top: 20px;
+    margin-top: 20px;
+    border-top: 1px solid #f8f8f8;
+}
+
+#sidebar{
+    background-color: #fff;
+    -moz-box-shadow: 0 1px 2px #adadad;
+    -webkit-box-shadow: 0 1px 2px #adadad;
+    box-shadow: 0 1px 2px #adadad;
+    padding: 10px 10px 15px;
+    margin-top: 50px;
+
+    /*padding: 50px;*/
+}
+.first-section{
+    margin-top: 50px;
+
+}
+#sidebar .theme-link{
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+}
+#sidebar .theme-link a{
+    color: #353535;
+    font-weight: bold;
+}
+
+#sidebar .theme-link .version{
+    margin-left: 10px;
+    font-size: 12px;
+    color: #dbdbdb;
+}
+
+
+.highlight-text {
+    padding: 2px 4px;
+    font-size: 90%;
+    color: #c7254e;
+    white-space: nowrap;
+    background-color: #f9f2f4;
+    border-radius: 4px;
+}
+
+.better-weather-examples{
+    margin: 50px 0 0;
+}
+.better-weather-examples .better-weather{
+    margin-bottom: 29px;
+}
+
+.container{
+    background: url(../img/bg-pattern.png) no-repeat top right ;
+}
+.logo-col{
+    padding: 90px 0 0;
+    text-align: center;
+}
+
+.logo a{
+    display: inline-block;
+    background: url(../img/BetterWeather-logo.png) no-repeat ;
+    width: 145px;
+    height: 174px;
+    text-indent: -9999px;
+    overflow: hidden;
+}
+
+.container{
+}
