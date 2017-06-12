@@ -9,7 +9,7 @@
   <!--Import jQuery before materialize.js-->
   <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
   <!--Import Google Icon Font-->
-  <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <!--Import jQuery before materialize.js-->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>
   <!--Import materialize.css-->
@@ -184,6 +184,11 @@
     <div class="row">
       <div class="col l6 s12">
         <h5 class="white-text">The Dive Den</h5>
+        <form name="myForm" action="" onsubmit="return validateForm();" 
+        method="post" class="white-text"> Sign Up Email for Newsletter: <input type="text" name="email">
+        <input type="submit" value="Submit">
+        </form>
+
       </div>
       <div class="col l4 offset-l2 s12">
         <h5 class="white-text">Buy Scuba Gear Below</h5>
