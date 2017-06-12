@@ -77,33 +77,40 @@
       <div id="show">
         <div class="row">
           <div class="col s12 m12">
-            <div class="card medium infoCard">
-              <div class="card-image">
-                <!--<img src="images/sample-1.jpg">-->
-                <div id="flickrImg"><img class="flickrImages" src="assets/images/defaultScuba.jpg"> </div><!-- photos from flickr --> <!-- end of flickr -->
-                <span class="card-title">Scuba Location</span>
-              </div> <!-- end of card image -->
-              <div class="card-content">
-                <div id="wikip">Florida is considered one of the premier destinations for all things diving as many people already know.  What you may not know is the variety of dive sites that can be found in florida.  These sites include:
-                - Freshwater Springs
-                - Sinkholes (new/old)
-                - Manmade Reefs/Breakwaters
-                - Offshore Wrecks
-                - Offshore Reefs
-                - and many more!
-                This site will help you explore some of the most well known diving spots in florida and also give you access to locations that only the locals know.  Click on a location in the map that interests you to find your new dive site!
+
+            <div class="card medium">
+              <div class="card">
+                <div class="card-image waves-effect waves-block waves-light">
+                     <!--<img src="images/sample-1.jpg">-->
+                  <div id="flickrImg"><img class="flickrImages" src="assets/images/defaultScuba.jpg"> </div><!-- photos from flickr --> <!-- end of flickr -->
+
                 </div>
-              </div> <!-- end of card content -->
-              <div class="card-action">
-                <a href="#">This is a link</a>
-              </div> <!-- end of card action -->
+                <div class="card-content">
+                  <span class="card-title activator grey-text text-darken-4">Scuba Location<i class="material-icons right">more_vert</i></span>
+                  <p><a href="#">This is a link</a></p>
+                </div>
+                <div class="card-reveal">
+                  <span class="card-title grey-text text-darken-4" id="markerTitle">Scuba Location<i class="material-icons right">close</i></span>
+                  <p = id="wikip">Florida is considered one of the premier destinations for all things diving as many people already know.  What you may not know is the variety of dive sites that can be found in florida.  These sites include:
+                  <ul>
+                    <li>- Freshwater Springs</li>
+                    <li>- Sinkholes (new/old)</li>
+                    <li>- Manmade Reefs/Breakwaters</li>
+                    <li>- Offshore Wrecks</li>
+                    <li>- Offshore Reefs</li>
+                    <li>- and many more!</li>
+                    </ul>
+                  This site will help you explore some of the most well known diving spots in florida and also give you access to locations that only the locals know.  Click on a location in the map that interests you to find your new dive site!.</p>
+                </div>
+              </div>
+           
             </div> <!-- end of card medium -->
           </div> <!-- end of m12 -->
         </div> <!-- end of card row -->
       </div><!--end of profile-->
     </div><!--end of col 5-->
-  </div><!--end of 1st row -->
-      </div>
+  </div><!--end of 1st row --> 
+
 
   <div class="row">
     <div class="tewlve columns">
@@ -180,7 +187,7 @@
     </div> <!--end of col 12-->
   </div>  <!-- end of 2nd row -->
 
-</div><!--end of container-->
+  </div><!--end of container-->
 
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyClbAC2i9F_DocCTnfZokjM12bMdsT7bSs&libraries=places&callback=initMap" async defer></script>
 
