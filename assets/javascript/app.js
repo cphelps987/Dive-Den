@@ -68,8 +68,10 @@ function createMarker(lat, lng, site) {
         markerIt = this;
         console.log(marker.title);
         //console.log(typeof (marker.title));
+        console.log("lat" + lat);
+        console.log("lng" + lng);
 
-        <!--wiki-->
+        //wiki start
         var wikiSearch = marker.title;
         var wikiURL = "https://en.wikipedia.org/w/api.php";
 
@@ -93,7 +95,7 @@ function createMarker(lat, lng, site) {
 
         wikiURL += "?" + $.param(params);
         $.ajax({
-            url: wikiURL,
+            url   : wikiURL,
             method: "GET"
         })
             .done(function (response) {
@@ -116,7 +118,7 @@ function createMarker(lat, lng, site) {
 
 
 
-            }); //End .done
+            }); //End .done //end of wiki
 
         //flickr
 
@@ -130,7 +132,81 @@ function createMarker(lat, lng, site) {
                 $("<img>").attr("src", "assets/images/defaultScuba.jpg").prependTo("#flickrImg");
                 console.log("no results image for flickr");
             }
-        });
+        });//end of flickr
+
+        //start of weather
+        var doc_ajax_url = "http://better-studio.net/plugins/better-weather/better-weather/ajax/ajax.php";
+
+        var BW_Localized = {
+            apiKey: '68f8c34082a9d39ed4c038a9ff4c22b1',
+            monthList: {
+                January: 'January',
+                February: 'February',
+                March: 'March',
+                April: 'April',
+                May: 'May',
+                June: 'June',
+                July: 'July',
+                August: 'August',
+                September: 'September',
+                October: 'October',
+                November: 'November',
+                December: 'December'
+            },
+            daysList: {
+                Sat: 'Sat',
+                Sun: 'Sun',
+                Mon: 'Mon',
+                Tue: 'Tue',
+                Wed: 'Wed',
+                Thu: 'Thu',
+                Fri: 'Fri'
+            },
+            stateList: {
+                clear: 'Clear',
+                rain: 'Rain',
+                snow: 'Snow',
+                sleet: 'Sleet',
+                wind: 'Wind',
+                fog: 'Fog',
+                cloudy: 'Cloudy',
+                mostly_cloudy: 'Mostly Cloudy',
+                partly_cloudy: 'Partly Cloudy',
+                thunderstorm: 'Thunderstorm',
+                drizzle: 'Drizzle',
+                light_Rain: 'Light Rain',
+                overcast: 'Overcast'
+            }
+        };
+
+        (function ($) {
+
+            $('#weather-7').betterWeather({
+                apiKey: '68f8c34082a9d39ed4c038a9ff4c22b1',
+                style        : "modern",
+                nextDays     : false ,
+                unit         : "F" ,// F
+                bgColor      : '#333',
+                location     : lat, lng,
+                animatedIcons: true,
+                url          : doc_ajax_url
+            });
+
+            // $('#weather-7').betterWeather({
+            //     apiKey: "68f8c34082a9d39ed4c038a9ff4c22b1",
+            //     style:  "modern",
+            //     nextDays: true ,
+            //     bgColor: '#333',
+            //     location: '3.4921,103.3938',
+            //     animatedIcons: true,
+            //     url         :   doc_ajax_url
+            // });
+
+
+            // Hack for element query on local/cross domain
+            elementQuery({".better-weather": {"max-width": ["2000px", "1170px", "970px", "830px", "650px", "550px", "400px", "300px", "170px", "100px", "50px"]}});
+
+        })(jQuery);
 
     });
 }
@@ -178,6 +254,8 @@ console.log("flickr ready!");
 //-----------------------------------------WEATHER---------------------------------------------------------
 
 
+
+/*
 var APIKey = "166a433c57516f51dfab1f7edaed8413";
 
 var weatherURL = "http://api.openweathermap.org/data/2.5/weather?" +
@@ -187,22 +265,23 @@ $.ajax({
     url: weatherURL,
     method: "GET"
 }).done(function (response) {
-    /*console.log(weatherURL);
+    /!*console.log(weatherURL);
      console.log(response);
-     */
+     *!/
     $(".city").html("<h1>" + response.name + " Weather Details</h1>");
     $(".wind").html("Wind Speed: " + response.wind.speed);
     $(".humidity").html("Humidity: " + response.main.humidity);
     $(".mainTemp").html("Temperature (F) " + response.main.temp);
     $(".minTemp").html("Min. Temperature: " + response.main.temp_min);
     $(".maxTemp").html("Max Temperature: " + response.main.temp_max);
+*/
 
     /*   console.log("Wind Speed: " + response.wind.speed);
      console.log("Humidity: " + response.main.humidity);
      console.log("Temperature (F) " + response.main.temp);
      console.log("Min. Temperature: " + response.main.temp_min);
      console.log("Max Temperature: " + response.main.temp_max);*/
-});
+/*});*/
 
 //-----------------------------------------SLIDESHOW---------------------------------------------------------
 

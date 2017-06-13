@@ -40,7 +40,14 @@ h5 {
   font-family: 'Kaushan Script', cursive;
 }
 
+/*.container {
+  width: 970px;
+  padding: 30px 0;
+}*/
 
+.better-weather {
+  margin-bottom: 29px;;
+}
 
 /*weather css from yahoo jQuery*/
 /* #wrap {
@@ -192,3 +199,5 @@ img {
 .input {
 
 }
+
+
