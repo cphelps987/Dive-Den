@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="description" content="">
+		<meta name="author" content="BetterStudio">
+		<title>BetterWeather Examples</title>
+
+		<!-- Bootstrap core CSS and page custom styles-->
+		<link href="../documentation/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+        <!-- BetterWeather styles -->
+        <link href="../better-weather/css/bw-style.min.css" rel="stylesheet">
+
+        <!-- Custom styles for this template -->
+        <style>
+            .container{
+                width: 970px;
+                padding: 30px 0;
+            }
+            .better-weather{
+                margin-bottom: 29px;;
+            }
+        </style>
+
+
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+		<!--[if lt IE 9]>
+		<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+		<script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+		<![endif]-->
+	</head>
+	<body >
+		<div class="container">
+
+            <div class="row better-weather-examples">
+
+                <div class="row">
+                    <div class="col-lg-11 col-md-12">
+
+                        <div id="weather-2"></div>
+
+                        <div class="row">
+                            <div class="col-lg-10 col-md-12">
+
+                                <div id="weather-4"></div>
+
+                                <div class="row">
+                                    <div class="col-lg-12 col-md-12">
+                                        <div id="weather-5"></div>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-lg-10  col-md-12">
+                                        <div id="weather-7"></div>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="col-lg-2">
+                                <div id="weather-6"></div>
+                            </div>
+                        </div>
+
+                        <div id="weather-8"></div>
+
+                    </div>
+
+                    <div class="col-lg-1 col-md-12 ">
+                        <div id="weather-3"></div>
+                    </div>
+
+                </div>
+
+
+                <!-- Modern style - smaller than 400 pixel -->
+                <div class="row">
+                    <div class="col-lg-5 col-md-5 col-sm-3">
+                        <div id="weather-9"></div>
+                    </div>
+                    <div class="col-lg-4  col-md-4 col-sm-3">
+                        <div id="weather-10"></div>
+                    </div>
+                    <div class="col-lg-2  col-md-2 col-sm-3">
+                        <div id="weather-11"></div>
+                    </div>
+                    <div class="col-lg-1 col-md-1 col-sm-3">
+                        <div id="weather-12"></div>
+                    </div>
+                </div>
+
+
+                <!-- Normal style - smaller than 400 pixel -->
+                <div class="row">
+                    <div class="col-lg-5 col-md-5 col-sm-3">
+                        <div id="weather-13"></div>
+                    </div>
+                    <div class="col-lg-4 col-md-3 col-sm-3">
+                        <div id="weather-14"></div>
+                    </div>
+                    <div class="col-lg-2 col-md-2 col-sm-3">
+                        <div id="weather-15"></div>
+                    </div>
+                    <div class="col-lg-1 col-md-2 col-sm-3">
+                        <div id="weather-16"></div>
+                    </div>
+                </div>
+
+                <!-- Static color examples -->
+                <div class="row hidden-xs hidden-sm hidden-md" style="width: 700px">
+                    <div class="col-lg-2">
+                        <div id="example-static-color-1"></div>
+                    </div>
+                    <div class="col-lg-2">
+                        <div id="example-static-color-2"></div>
+                    </div>
+                    <div class="col-lg-2">
+                        <div id="example-static-color-3"></div>
+                    </div>
+                    <div class="col-lg-2">
+                        <div id="example-static-color-4"></div>
+                    </div>
+                    <div class="col-lg-2">
+                        <div id="example-static-color-5"></div>
+                    </div>
+                    <div class="col-lg-2">
+                        <div id="example-static-color-6"></div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div id="example-state-sunrise" class="state-sunrise"></div>
+                    </div>
+                </div>
+
+
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div id="example-state-sunset" class="state-sunset"></div>
+                    </div>
+                </div>
+
+
+                <!-- Envato State ;) -->
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div id="weather-18"></div>
+                    </div>
+                </div>
+
+                <!-- Inline modes -->
+                <div class="row">
+
+                    <div class="col-lg-3 col-lg-offset-2">
+                        <span id="example-inline-large"></span>
+                    </div>
+                    <div class="col-lg-3 ">
+                        <span id="example-inline-normal"></span>
+                    </div>
+                    <div class="col-lg-3 text-center">
+                        <span id="example-inline-small"></span>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+		<!-- /container -->
+
+        <!-- jQuery, plugins and BetterWeather script-->
+        <script src="../better-weather/js/jquery.min.js" type="text/javascript"></script>
+        <script src="../better-weather/js/skycons.js"></script>
+        <script src="../better-weather/js/elementQuery.min.js"></script>
+        <script src="../better-weather/js/betterweather.min.js"></script>
+
+        <!-- Bootstrap core JavaScript -->
+        <script src="../documentation/bootstrap/js/bootstrap.min.js"></script>
+        <script type='text/javascript'>
+            var BW_Localized = {
+                apiKey: '68f8c34082a9d39ed4c038a9ff4c22b1',
+                monthList: {
+                    January     : 'January',
+                    February    : 'February',
+                    March       : 'March',
+                    April       : 'April',
+                    May         : 'May',
+                    June        : 'June',
+                    July        : 'July',
+                    August      : 'August',
+                    September   : 'September',
+                    October     : 'October',
+                    November    : 'November',
+                    December    : 'December'
+                },
+                daysList: {
+                    Sat : 'Sat',
+                    Sun : 'Sun',
+                    Mon : 'Mon',
+                    Tue : 'Tue',
+                    Wed : 'Wed',
+                    Thu : 'Thu',
+                    Fri : 'Fri'
+                },
+                stateList: {
+                    clear           : 'Clear',
+                    rain            : 'Rain',
+                    snow            : 'Snow',
+                    sleet           : 'Sleet',
+                    wind            : 'Wind',
+                    fog             : 'Fog',
+                    cloudy          : 'Cloudy',
+                    mostly_cloudy   : 'Mostly Cloudy',
+                    partly_cloudy   : 'Partly Cloudy',
+                    thunderstorm    : 'Thunderstorm',
+                    drizzle         : 'Drizzle',
+                    light_Rain      : 'Light Rain',
+                    overcast        : 'Overcast'
+                }
+            } ;
+        </script>
+
+
+        <script>
+            //            var doc_ajax_url = "../better-weather/ajax/ajax.php";
+            var doc_ajax_url = "http://better-studio.net/plugins/better-weather/better-weather/ajax/ajax.php";
+        </script>
+
+        <script>
+        (function($){
+
+            $('#weather-2').betterWeather({
+                apiKey: "68f8c34082a9d39ed4c038a9ff4c22b1",
+                style:  "modern",
+                nextDays: true ,
+                bgColor: '#333',
+                location: '25.7748,-80.1977',
+                animatedIcons: true,
+                url         :   doc_ajax_url
+            });
+
+
+            $('#weather-3').betterWeather({
+                apiKey: "68f8c34082a9d39ed4c038a9ff4c22b1",
+                style:  "modern",
+                nextDays: true ,
+                bgColor: '#333',
+                location: '35.6705,139.7409',
+                animatedIcons: true,
+                url         :   doc_ajax_url
+            });
+
+            $('#weather-4').betterWeather({
+                apiKey: "68f8c34082a9d39ed4c038a9ff4c22b1",
+                style:  "modern",
+                nextDays: true ,
+                bgColor: '#333',
+                location: '38.8991,-77.0290',
+                animatedIcons: true,
+                url         :   doc_ajax_url
+            });
+
+            $('#weather-5').betterWeather({
+                apiKey: "68f8c34082a9d39ed4c038a9ff4c22b1",
+                style:  "modern",
+                nextDays: false ,
+                bgColor: '#333',
+                location: '-15.7785,-47.9287',
+                animatedIcons: true,
+                url         :   doc_ajax_url
+            });
+
+            $('#weather-6').betterWeather({
+                apiKey: "68f8c34082a9d39ed4c038a9ff4c22b1",
+                style:  "modern",
+                nextDays: false ,
+                bgColor: '#333',
+                location: '65.2019,-18.8894',
+                animatedIcons: false,
+                url         :   doc_ajax_url
+            });
+            $('#weather-7').betterWeather({
+                apiKey: "68f8c34082a9d39ed4c038a9ff4c22b1",
+                style:  "modern",
+                nextDays: true ,
+                bgColor: '#333',
+                location: '3.4921,103.3938',
+                animatedIcons: true,
+                url         :   doc_ajax_url
+            });
+            $('#weather-8').betterWeather({
+                apiKey: "68f8c34082a9d39ed4c038a9ff4c22b1",
+                style:  "modern",
+                nextDays: false ,
+                bgColor: '#333',
+                location: '38.9577,35.2469',
+                animatedIcons: false,
+                url         :   doc_ajax_url
+            });
+            $('#weather-9').betterWeather({
+                apiKey: "68f8c34082a9d39ed4c038a9ff4c22b1",
+                style:  "modern",
+                nextDays: false ,
+                bgColor: '#333',
+                location: '14.6953,-17.4505',
+                animatedIcons: true,
+                url         :   doc_ajax_url
+            });
+            $('#weather-10').betterWeather({
+                apiKey: "68f8c34082a9d39ed4c038a9ff4c22b1",
+                style:  "modern",
+                nextDays: false ,
+                bgColor: '#333',
+                location: '34.6440,50.8910',
+                animatedIcons: true,
+                url         :   doc_ajax_url
+            });
+            $('#weather-11').betterWeather({
+                apiKey: "68f8c34082a9d39ed4c038a9ff4c22b1",
+                style:  "modern",
+                nextDays: false ,
+                bgColor: '#333',
+                location: '60.4720,8.4689',
+                animatedIcons: true,
+                url         :   doc_ajax_url
+            });
+            $('#weather-12').betterWeather({
+                apiKey: "68f8c34082a9d39ed4c038a9ff4c22b1",
+                style:  "normal",
+                nextDays: false ,
+                bgColor: '#333',
+                location: '28.3948,84.1278',
+                locationName: 'Nepal',
+                animatedIcons: true,
+                url         :   doc_ajax_url
+            });
+            $('#weather-13').betterWeather({
+                apiKey: "68f8c34082a9d39ed4c038a9ff4c22b1",
+                style:  "normal",
+                nextDays: true ,
+                bgColor: '#333',
+                location: '32.9914,138.4602',
+                animatedIcons: true,
+                url         :   doc_ajax_url
+            });
+            $('#weather-14').betterWeather({
+                apiKey: "68f8c34082a9d39ed4c038a9ff4c22b1",
+                style:  "normal",
+                nextDays: true ,
+                bgColor: '#333',
+                location: '65.2019,-18.8894',
+                locationName: 'Iceland',
+                animatedIcons: true,
+                url         :   doc_ajax_url
+            });
+            $('#weather-15').betterWeather({
+                apiKey: "68f8c34082a9d39ed4c038a9ff4c22b1",
+                style:  "normal",
+                nextDays: true ,
+                bgColor: '#333',
+                location: '77.5899,23.6530',
+                animatedIcons: true,
+                url         :   doc_ajax_url
+            });
+            $('#weather-16').betterWeather({
+                apiKey: "68f8c34082a9d39ed4c038a9ff4c22b1",
+                style:  "normal",
+                nextDays: false ,
+                bgColor: '#d05b25',
+                location: '-16.7417,-1.6685',
+                naturalBackground: false,
+                animatedIcons: true,
+                url         :   doc_ajax_url
+            });
+            $('#weather-18').betterWeather({
+                apiKey: "68f8c34082a9d39ed4c038a9ff4c22b1",
+                style:  "normal",
+                nextDays: false ,
+                bgColor: '#333',
+                location: '-37.817314,144.955431',
+                locationName: 'Envato!',
+                animatedIcons: true,
+                url         :   doc_ajax_url
+            });
+
+
+            // state sunrise& sunset
+            $('#example-state-sunrise').betterWeather({
+                style:  "normal",
+                nextDays: false ,
+                bgColor: '#333',
+                location: '60.4720,8.4689',
+                locationName: 'Sunrise Example',
+                animatedIcons: true,
+                url         :   doc_ajax_url
+            });
+            $('#example-state-sunset').betterWeather({
+                style:  "normal",
+                nextDays: false ,
+                bgColor: '#333',
+                location: '60.4720,8.4689',
+                locationName: 'Sunset Example',
+                animatedIcons: true,
+                url         :   doc_ajax_url
+            });
+
+            // Inline mode examples
+            $('#example-inline-large').betterWeather({
+                location: '14.6953,-17.4505',
+                animatedIcons: true,
+                fontColor: "#333",
+                url         :   doc_ajax_url,
+
+                mode : "inline",
+                inlineSize: "large"
+            });
+
+            $('#example-inline-normal').betterWeather({
+                location: '-16.7417,-1.6685',
+                animatedIcons: true,
+                fontColor: "#333",
+                url         :   doc_ajax_url,
+
+                mode : "inline",
+                inlineSize: "medium"
+            });
+
+            $('#example-inline-small').betterWeather({
+                location: '60.4720,8.4689',
+                animatedIcons: true,
+                fontColor: "#333",
+                url         :   doc_ajax_url,
+
+                mode : "inline",
+                inlineSize: "small"
+            });
+
+            /* example-static-color */
+            $('#example-static-color-1').betterWeather({
+                location: '60.4720,8.4689',
+                animatedIcons: true,
+                bgColor: "#dd2932",
+                naturalBackground: false,
+                url         :   doc_ajax_url
+            });
+            $('#example-static-color-2').betterWeather({
+                location: '60.4720,8.4689',
+                animatedIcons: true,
+                bgColor: "#D93",
+                naturalBackground: false,
+                url         :   doc_ajax_url
+            });
+            $('#example-static-color-3').betterWeather({
+                location: '60.4720,8.4689',
+                animatedIcons: true,
+                bgColor: "#8224E3",
+                naturalBackground: false,
+                url         :   doc_ajax_url
+            });
+            $('#example-static-color-4').betterWeather({
+                location: '60.4720,8.4689',
+                animatedIcons: false,
+                bgColor: "#1E73BE",
+                naturalBackground: false,
+                url         :   doc_ajax_url
+            });
+            $('#example-static-color-5').betterWeather({
+                location: '60.4720,8.4689',
+                animatedIcons: false,
+                bgColor: "#328b2d",
+                naturalBackground: false,
+                url         :   doc_ajax_url
+            });
+            $('#example-static-color-6').betterWeather({
+                location: '60.4720,8.4689',
+                animatedIcons: true,
+                bgColor: "#d05b25",
+                naturalBackground: false,
+                url         :   doc_ajax_url
+            });
+
+            // Hack for element query on local/cross domain
+            elementQuery({".better-weather":{"max-width":["2000px","1170px","970px","830px","650px","550px","400px","300px","170px","100px","50px"]}});
+
+        })(jQuery);
+        </script>
+
+    </body>
+</html>
