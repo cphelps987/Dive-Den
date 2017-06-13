@@ -70,7 +70,7 @@ function createMarker(lat, lng, site) {
         console.log(marker.title);
         //console.log(typeof (marker.title));
         currentLocation = lat + " , " + lng;
-        console.log(currentLocation + "currentLocation");
+        console.log(currentLocation);
         console.log(lat);
         console.log(lng);
         console.log(site);
