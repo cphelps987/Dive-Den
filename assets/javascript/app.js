@@ -61,6 +61,7 @@ function createMarker(lat, lng, site) {
 
 
     var markerIt = "";
+    var currentLocation = "";
 
     google.maps.event.addListener(marker, 'click', function () {
         infowindow.setContent(site);
@@ -68,8 +69,33 @@ function createMarker(lat, lng, site) {
         markerIt = this;
         console.log(marker.title);
         //console.log(typeof (marker.title));
-        console.log("lat" + lat);
-        console.log("lng" + lng);
+        currentLocation = lat + " , " + lng;
+        console.log(currentLocation);
+        console.log(lat);
+        console.log(lng);
+        console.log(site);
+
+
+        var doc_ajax_url = "http://better-studio.net/plugins/better-weather/better-weather/ajax/ajax.php";
+
+
+
+        $('#weather-7').betterWeather({
+            apiKey: "1208888c1e4c797e28a237b4c0888f7b",
+            style:  "modern",
+            nextDays: false ,
+            bgColor: '#333',
+            location: currentLocation,
+            unit        :   "F" ,// F
+            locationName:   site,
+            animatedIcons: true,
+            url         :   doc_ajax_url
+        });
+
+        // Hack for element query on local/cross domain
+        elementQuery({".better-weather": {"max-width": ["2000px", "1170px", "970px", "830px", "650px", "550px", "400px", "300px", "170px", "100px", "50px"]}});
+
+
 
         //wiki start
         var wikiSearch = marker.title;

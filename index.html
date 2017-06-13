@@ -1,9 +1,11 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+
   <title>Simple Map</title>
-  <meta name="viewport" content="initial-scale=1.0">
+
   <meta charset="utf-8">
+  <meta name="viewport" content="initial-scale=1.0">
   <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -23,17 +25,100 @@
   <link rel="stylesheet" href="assets/css/skeleton.css">
   <link rel="stylesheet" href="assets/css/style.css">
   <script type="text/javascript" src="assets/javascript/app.js"></script>
+
   <!--weather app links-->
-  <link rel="stylesheet" href="assets/css/bootstrap.css">
-  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-  <script type="text/javascript" src="assets/javascript/betterweather.js"></script>
+  <!--<link rel="stylesheet" href="BetterWeather-Stand-alone-v1.4/Documentation/bootstrap/css/bootstrap.css">
+  <link rel="stylesheet" href="BetterWeather-Stand-alone-v1.4/Documentation/bootstrap/css/bootstrap.min.css">
+  <script type="text/javascript" src="BetterWeather-Stand-alone-v1.4/better-weather/js/betterweather.js"></script>
   <!-- BetterWeather styles -->
-  <link href="better-weather/css/bw-style.min.css" rel="stylesheet">
+  <!--<link href="BetterWeather-Stand-alone-v1.4/better-weather/css/bw-style.min.css" rel="stylesheet">
+  <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+  <!--<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+  <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+  <![endif]-->
+
+  <!-- Bootstrap core CSS and page custom styles-->
+  <link href="./BetterWeather-Stand-alone-v1.4/Documentation/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+
+  <!-- BetterWeather styles -->
+  <link href="BetterWeather-Stand-alone-v1.4/better-weather/css/bw-style.min.css" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <style>
+    .container {
+      width: 970px;
+      padding: 30px 0;
+    }
+
+    .better-weather {
+      margin-bottom: 29px;;
+    }
+  </style>
+
   <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
   <!--[if lt IE 9]>
   <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
   <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
   <![endif]-->
+</head>
+
+<!-- jQuery, plugins and BetterWeather script-->
+<script src="./BetterWeather-Stand-alone-v1.4/better-weather/js/jquery.min.js" type="text/javascript"></script>
+<script src="./BetterWeather-Stand-alone-v1.4/better-weather/js/skycons.js"></script>
+<script src="./BetterWeather-Stand-alone-v1.4/better-weather/js/elementQuery.min.js"></script>
+<script src="./BetterWeather-Stand-alone-v1.4/better-weather/js/betterweather.min.js"></script>
+
+<!-- Bootstrap core JavaScript -->
+<script src="../documentation/bootstrap/js/bootstrap.min.js"></script>
+<script type='text/javascript'>
+    var BW_Localized = {
+        apiKey: '68f8c34082a9d39ed4c038a9ff4c22b1',
+        monthList: {
+            January: 'January',
+            February: 'February',
+            March: 'March',
+            April: 'April',
+            May: 'May',
+            June: 'June',
+            July: 'July',
+            August: 'August',
+            September: 'September',
+            October: 'October',
+            November: 'November',
+            December: 'December'
+        },
+        daysList: {
+            Sat: 'Sat',
+            Sun: 'Sun',
+            Mon: 'Mon',
+            Tue: 'Tue',
+            Wed: 'Wed',
+            Thu: 'Thu',
+            Fri: 'Fri'
+        },
+        stateList: {
+            clear: 'Clear',
+            rain: 'Rain',
+            snow: 'Snow',
+            sleet: 'Sleet',
+            wind: 'Wind',
+            fog: 'Fog',
+            cloudy: 'Cloudy',
+            mostly_cloudy: 'Mostly Cloudy',
+            partly_cloudy: 'Partly Cloudy',
+            thunderstorm: 'Thunderstorm',
+            drizzle: 'Drizzle',
+            light_Rain: 'Light Rain',
+            overcast: 'Overcast'
+        }
+    };
+</script>
+
+
+
+
 
 
 </head>
@@ -75,6 +160,44 @@
     <div class="five columns">
       <div id="profile">
         <div id="weather-7">
+
+          <script>
+              //            var doc_ajax_url = "../better-weather/ajax/ajax.php";
+              var doc_ajax_url = "http://better-studio.net/plugins/better-weather/better-weather/ajax/ajax.php";
+          </script>
+
+          <script>
+              (function ($) {
+
+
+                /*$('#weather-7').betterWeather({
+                 apiKey: "68f8c34082a9d39ed4c038a9ff4c22b1",
+                 style: "modern",
+                 nextDays: true,
+                 bgColor: '#333',
+                 animatedIcons: true,
+                 location: ,
+                 url: doc_ajax_url
+                 });*/
+
+                  $('#weather-7').betterWeather({
+                      apiKey: "1208888c1e4c797e28a237b4c0888f7b",
+                      style:  "modern",
+                      nextDays: false ,
+                      unit        :   "F" ,// F
+                      bgColor: '#333',
+                      location: lat, lng,
+                      animatedIcons: true,
+                      url         :   doc_ajax_url
+                  });
+
+
+                  // Hack for element query on local/cross domain
+                  elementQuery({".better-weather": {"max-width": ["2000px", "1170px", "970px", "830px", "650px", "550px", "400px", "300px", "170px", "100px", "50px"]}});
+
+              })(jQuery);
+          </script>
+
           <span id="icon2"></span>
           <span id="temp"></span>
         </div><!-- end of weather-->
@@ -88,7 +211,7 @@
             <div class="card medium infoCard">
               <div class="card-image">
                 <!--<img src="images/sample-1.jpg">-->
-                <div id="flickrImg"><img class="flickrImages" src="assets/images/defaultScuba.jpg"> </div><!-- photos from flickr --> <!-- end of flickr -->
+                <div id="flickrImg"><img class="flickrImages" src="assets/Images/defaultScuba.jpg"> </div><!-- photos from flickr --> <!-- end of flickr -->
                 <span class="card-title">Scuba Location</span>
               </div> <!-- end of card image -->
               <div class="card-content" id="card-scroll">
