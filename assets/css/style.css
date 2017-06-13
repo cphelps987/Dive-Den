@@ -181,14 +181,13 @@ img {
   .text {font-size: 11px}
 }
 
-.infoCard {
-  opacity: 0;
-}
-
 #profile {
   padding-top: 25px; 
 }
 
-.input {
-
+#card-scroll {
+  position: absolute;
+  width: 375px;
+  height: 400px;
+  overflow-y: scroll;
 }

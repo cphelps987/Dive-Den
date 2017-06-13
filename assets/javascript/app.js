@@ -84,6 +84,7 @@ function createMarker(lat, lng, site) {
             "iwurl": 1,
             "titles": wikiSearch,
             "redirects": 1,
+            "exintro": true,
             "inprop": "url"
 
         };
