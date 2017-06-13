@@ -1,5 +1,5 @@
 //-----------------------------------------DIVE SITES---------------------------------------------------------
-console.log('Divesite page ready');
+//console.log('Divesite page ready');
 
 var diveURL = "https://cors-bcs.herokuapp.com/http://api.divesites.com/?mode=sites&lat=28.538336&lng=-81.379234&dist=1000";
 
@@ -45,7 +45,7 @@ function initMap() {
     var florida = {lat: 28.538336, lng: -81.379234};
     map = new google.maps.Map(document.getElementById('map'), {
         center: florida,
-        zoom: 8
+        zoom  : 8
     });
     infowindow = new google.maps.InfoWindow();
 
@@ -54,47 +54,49 @@ function initMap() {
 function createMarker(lat, lng, site) {
     // console.log('CreateMarker', lat, lng, site);
     var marker = new google.maps.Marker({
-        map: map,
+        map     : map,
         position: {lat: lat, lng: lng},
-        title: site
+        title   : site
     });
 
 
     var markerIt = "";
-    var currentLocation = "";
+    var markerLocation = "";
 
     google.maps.event.addListener(marker, 'click', function () {
         infowindow.setContent(site);
         infowindow.open(map, this);
         markerIt = this;
-        console.log(marker.title);
+        //console.log(marker.title);
         //console.log(typeof (marker.title));
-        currentLocation = lat + " , " + lng;
-        console.log(currentLocation);
-        console.log(lat);
-        console.log(lng);
-        console.log(site);
+        markerLocation = lat + " , " + lng;
+        //console.log("current location " + markerLocation);
+        //console.log("lat " + lat);
+        //console.log("lng " + lng);
+        //console.log("site " + site);
 
+/*
 
         var doc_ajax_url = "http://better-studio.net/plugins/better-weather/better-weather/ajax/ajax.php";
 
 
 
         $('#weather-7').betterWeather({
-            apiKey: "1208888c1e4c797e28a237b4c0888f7b",
-            style:  "modern",
-            nextDays: false ,
-            bgColor: '#333',
-            location: currentLocation,
-            unit        :   "F" ,// F
-            locationName:   site,
+            apiKey       : "1208888c1e4c797e28a237b4c0888f7b",
+            style        : "modern",
+            nextDays     : false ,
+            bgColor      : '#333',
+            location     : markerLocation,
+            unit         : "F" ,// F
+            locationName : site,
             animatedIcons: true,
-            url         :   doc_ajax_url
+            url          : doc_ajax_url
         });
 
         // Hack for element query on local/cross domain
         elementQuery({".better-weather": {"max-width": ["2000px", "1170px", "970px", "830px", "650px", "550px", "400px", "300px", "170px", "100px", "50px"]}});
 
+*/
 
 
         //wiki start
@@ -103,21 +105,21 @@ function createMarker(lat, lng, site) {
 
 
         var params = {
-            "action": "query",
-            "format": "json",
-            "prop": "links|images|extlinks|imageinfo|info|url|extracts",
-            "iiprop": "timestamp|user|url|comment",
-            "meta": "url",
-            "origin": "*",
-            "iwurl": 1,
-            "titles": wikiSearch,
-            "redirects": 1,
-            "exintro": true,
-            "inprop": "url"
+            "action"    : "query",
+            "format"    : "json",
+            "prop"      : "links|images|extlinks|imageinfo|info|url|extracts",
+            "iiprop"    : "timestamp|user|url|comment",
+            "meta"      : "url",
+            "origin"    : "*",
+            "iwurl"     : 1,
+            "titles"    : wikiSearch,
+            "redirects" : 1,
+            "exintro"   : true,
+            "inprop"    : "url"
 
         };
 
-        console.log("parm title " + params.titles);
+        //console.log("parm title " + params.titles);
 
 
         wikiURL += "?" + $.param(params);
@@ -126,7 +128,7 @@ function createMarker(lat, lng, site) {
             method: "GET"
         })
             .done(function (response) {
-               console.log('wikiURL response', response);
+               //console.log('wikiURL response', response);
 
 
                 var objResult = response;
@@ -140,199 +142,39 @@ function createMarker(lat, lng, site) {
                     }); //End .each
                 } else {
                    $("#wikip").html("No Content for " + site);
-                    console.log("no results for wiki");
+                    //console.log("no results for wiki");
                     }
-
-
-
             }); //End .done //end of wiki
 
         //flickr
 
         $.getJSON("https://cors-bcs.herokuapp.com/https://api.flickr.com/services/feeds/photos_public.gne?tags="+ marker.title + ", scuba&format=json&nojsoncallback=1", function (data) {
-            console.log('Flickr Data', data);
+            //console.log('Flickr Data', data);
             if(data.items.length > 0) {
                 $.each(data.items, function (i, item) {
                     $("<img>").attr("src", item.media.m).prependTo("#flickrImg")
                 });
             } else {
                 $("<img>").attr("src", "assets/images/defaultScuba.jpg").prependTo("#flickrImg");
-                console.log("no results image for flickr");
+               // console.log("no results image for flickr");
             }
         });//end of flickr
-
-        //start of weather
-        var doc_ajax_url = "http://better-studio.net/plugins/better-weather/better-weather/ajax/ajax.php";
-
-        var BW_Localized = {
-            apiKey: '68f8c34082a9d39ed4c038a9ff4c22b1',
-            monthList: {
-                January: 'January',
-                February: 'February',
-                March: 'March',
-                April: 'April',
-                May: 'May',
-                June: 'June',
-                July: 'July',
-                August: 'August',
-                September: 'September',
-                October: 'October',
-                November: 'November',
-                December: 'December'
-            },
-            daysList: {
-                Sat: 'Sat',
-                Sun: 'Sun',
-                Mon: 'Mon',
-                Tue: 'Tue',
-                Wed: 'Wed',
-                Thu: 'Thu',
-                Fri: 'Fri'
-            },
-            stateList: {
-                clear: 'Clear',
-                rain: 'Rain',
-                snow: 'Snow',
-                sleet: 'Sleet',
-                wind: 'Wind',
-                fog: 'Fog',
-                cloudy: 'Cloudy',
-                mostly_cloudy: 'Mostly Cloudy',
-                partly_cloudy: 'Partly Cloudy',
-                thunderstorm: 'Thunderstorm',
-                drizzle: 'Drizzle',
-                light_Rain: 'Light Rain',
-                overcast: 'Overcast'
-            }
-        };
-
-        (function ($) {
-
-            $('#weather-7').betterWeather({
-                apiKey: '68f8c34082a9d39ed4c038a9ff4c22b1',
-                style        : "modern",
-                nextDays     : false ,
-                unit         : "F" ,// F
-                bgColor      : '#333',
-                location     : lat, lng,
-                animatedIcons: true,
-                url          : doc_ajax_url
-            });
-
-            // $('#weather-7').betterWeather({
-            //     apiKey: "68f8c34082a9d39ed4c038a9ff4c22b1",
-            //     style:  "modern",
-            //     nextDays: true ,
-            //     bgColor: '#333',
-            //     location: '3.4921,103.3938',
-            //     animatedIcons: true,
-            //     url         :   doc_ajax_url
-            // });
-
-
-            // Hack for element query on local/cross domain
-            elementQuery({".better-weather": {"max-width": ["2000px", "1170px", "970px", "830px", "650px", "550px", "400px", "300px", "170px", "100px", "50px"]}});
-
-        })(jQuery);
-
     });
 }
+
 
 
 //-----------------------------------------WIKIPEDIA---------------------------------------------------------
 
 
- console.log('wiki ready');
+ //console.log('wiki ready');
 
 
 
 
 //-----------------------------------------FLICKR---------------------------------------------------------
 
-console.log("flickr ready!");
-
-
-//site = response.sites[i].name;
-
-
-
-/*$.getJSON("https://cors-bcs.herokuapp.com/https://api.flickr.com/services/feeds/photos_public.gne?tags=florida,scuba&format=json&nojsoncallback=1", function (data) {
- //  console.log(data)
- $.each(data.items, function (i, item) {
- $("<img>").attr("src", item.media.m).appendTo("#flickrImg")
-
-
- $.getJSON("https://cors-bcs.herokuapp.com/https://api.flickr.com/services/feeds/photos_public.gne?tags=florida,scuba&format=json&nojsoncallback=1", function (data) {
- console.log(data)
- $.each(data.items, function (i, item) {
- $("<img>").attr("src", item.media.m).appendTo("#flickrImg")
- });
-
- });
-
-
- });
-
- });*/
-
-
-
-
-//-----------------------------------------WEATHER---------------------------------------------------------
-
-
-
-/*
-var APIKey = "166a433c57516f51dfab1f7edaed8413";
-
-var weatherURL = "http://api.openweathermap.org/data/2.5/weather?" +
-    "q=Orlando,ORL&units=imperial&appid=" + APIKey;
-
-$.ajax({
-    url: weatherURL,
-    method: "GET"
-}).done(function (response) {
-    /!*console.log(weatherURL);
-     console.log(response);
-     *!/
-    $(".city").html("<h1>" + response.name + " Weather Details</h1>");
-    $(".wind").html("Wind Speed: " + response.wind.speed);
-    $(".humidity").html("Humidity: " + response.main.humidity);
-    $(".mainTemp").html("Temperature (F) " + response.main.temp);
-    $(".minTemp").html("Min. Temperature: " + response.main.temp_min);
-    $(".maxTemp").html("Max Temperature: " + response.main.temp_max);
-*/
-
-    /*   console.log("Wind Speed: " + response.wind.speed);
-     console.log("Humidity: " + response.main.humidity);
-     console.log("Temperature (F) " + response.main.temp);
-     console.log("Min. Temperature: " + response.main.temp_min);
-     console.log("Max Temperature: " + response.main.temp_max);*/
-/*});*/
-
-//-----------------------------------------SLIDESHOW---------------------------------------------------------
-
-
-/*var slideIndex = 0;
-showSlides();
-
-function showSlides() {
-    var i;
-    var slides = document.getElementsByClassName("mySlides");
-    var dots = document.getElementsByClassName("dot");
-    for (i = 0; i < slides.length; i++) {
-       slides[i].style.display = "none";  
-    }
-    slideIndex++;
-    if (slideIndex> slides.length) {slideIndex = 1}    
-    for (i = 0; i < dots.length; i++) {
-        dots[i].className = dots[i].className.replace(" active", "");
-    }
-    slides[slideIndex-1].style.display = "block";  
-    dots[slideIndex-1].className += " active";
-    setTimeout(showSlides, 5000); // Change image every 5 seconds
-}
-*/
+//console.log("flickr ready!");
 
 
 //-----------------------------------------SEARCHBOX---------------------------------------------------------
@@ -358,8 +200,8 @@ function validateForm() {
         return false;
     } else {
         window.localStorage.setItem('email', x);
-    };
-};
+    }
+}
 
 
 //-----------------------------------------SEARCHBOX---------------------------------------------------------
