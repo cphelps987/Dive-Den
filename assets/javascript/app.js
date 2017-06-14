@@ -83,7 +83,7 @@ function createMarker(lat, lng, site) {
         $('#weather-7').betterWeather({
             apiKey: "1208888c1e4c797e28a237b4c0888f7b",
             style:  "modern",
-            nextDays: false ,
+            nextDays: true ,
             bgColor: '#333',
             location: currentLocation,
             unit        :   "F" ,// F
@@ -92,8 +92,7 @@ function createMarker(lat, lng, site) {
             url         :   doc_ajax_url
         });
 
-        // Hack for element query on local/cross domain
-        elementQuery({".better-weather": {"max-width": ["2000px", "1170px", "970px", "830px", "650px", "550px", "400px", "300px", "170px", "100px", "50px"]}});
+
 
 
 
@@ -161,8 +160,12 @@ function createMarker(lat, lng, site) {
             }
         });//end of flickr
 
+
+
+
+
+
         //start of weather
-        var doc_ajax_url = "http://better-studio.net/plugins/better-weather/better-weather/ajax/ajax.php";
 
         var BW_Localized = {
             apiKey: '68f8c34082a9d39ed4c038a9ff4c22b1',
@@ -206,34 +209,7 @@ function createMarker(lat, lng, site) {
             }
         };
 
-        (function ($) {
 
-            $('#weather-7').betterWeather({
-                apiKey: '68f8c34082a9d39ed4c038a9ff4c22b1',
-                style        : "modern",
-                nextDays     : false ,
-                unit         : "F" ,// F
-                bgColor      : '#333',
-                location     : lat, lng,
-                animatedIcons: true,
-                url          : doc_ajax_url
-            });
-
-            // $('#weather-7').betterWeather({
-            //     apiKey: "68f8c34082a9d39ed4c038a9ff4c22b1",
-            //     style:  "modern",
-            //     nextDays: true ,
-            //     bgColor: '#333',
-            //     location: '3.4921,103.3938',
-            //     animatedIcons: true,
-            //     url         :   doc_ajax_url
-            // });
-
-
-            // Hack for element query on local/cross domain
-            elementQuery({".better-weather": {"max-width": ["2000px", "1170px", "970px", "830px", "650px", "550px", "400px", "300px", "170px", "100px", "50px"]}});
-
-        })(jQuery);
 
     });
 }

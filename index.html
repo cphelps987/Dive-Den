@@ -52,8 +52,8 @@
       padding: 30px 0;
     }
 
-    .better-weather {
-      margin-bottom: 29px;;
+    .wether-bug {
+      margin-bottom: 29px;
     }
   </style>
 
@@ -71,7 +71,7 @@
 <script src="./BetterWeather-Stand-alone-v1.4/better-weather/js/betterweather.min.js"></script>
 
 <!-- Bootstrap core JavaScript -->
-<script src="../documentation/bootstrap/js/bootstrap.min.js"></script>
+<script src="./BetterWeather-Stand-alone-v1.4/Documentation/bootstrap/js/bootstrap.min.js"></script>
 <script type='text/javascript'>
     var BW_Localized = {
         apiKey: '68f8c34082a9d39ed4c038a9ff4c22b1',
@@ -180,13 +180,15 @@
                  url: doc_ajax_url
                  });*/
 
+
+
                   $('#weather-7').betterWeather({
                       apiKey: "1208888c1e4c797e28a237b4c0888f7b",
                       style:  "modern",
                       nextDays: false ,
                       unit        :   "F" ,// F
                       bgColor: '#333',
-                      location: lat, lng,
+                      visitorLocation: true,
                       animatedIcons: true,
                       url         :   doc_ajax_url
                   });
@@ -197,6 +199,7 @@
 
               })(jQuery);
           </script>
+
 
           <span id="icon2"></span>
           <span id="temp"></span>
